@@ -1,0 +1,17 @@
+.margin{
+    margin-bottom: 10px;
+}
+
+thead th {
+    background-color: #32B232;
+    color: white;
+}
+
+.btn-success,
+.btn-success:hover,
+.btn-success:active,
+.btn-success:visited,
+.btn-success:focus {
+    background-color: #32B232;
+    border-color: #32B232;
+}

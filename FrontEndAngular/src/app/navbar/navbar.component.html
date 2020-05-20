@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom no-gutters">
+  <div class="row col-md-8 offset-md-2">
+    <a class="navbar-brand" routerLink="" routerLinkActive="active">
+      <i class="fas fa-book-open"></i> Biblioteca</a
+    >
+
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse show" [ngClass]="{ show: navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Utilizatori
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a
+              class="dropdown-item"
+              routerLink="/users"
+              routerLinkActive="active"
+              >Lista utilizatori</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/users/add"
+              routerLinkActive="active"
+              >Adauga utilizator</a
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Carti
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a
+              class="dropdown-item"
+              routerLink="/books"
+              routerLinkActive="active"
+              >Lista carti</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/books/add"
+              routerLinkActive="active"
+              >Adauga carte</a
+            >
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/administration"
+            routerLinkActive="active"
+            *ngIf="auth.loggedIn"
+            >Tabel de administratie</a
+          >
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" *ngIf="!auth.loggedIn"
+            >Conectare</a
+          >
+          <a
+            class="nav-link"
+            routerLink=""
+            *ngIf="auth.loggedIn"
+            (click)="logout()"
+            >Deconectare</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

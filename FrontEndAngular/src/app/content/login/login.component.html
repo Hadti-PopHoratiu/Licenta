@@ -1,0 +1,57 @@
+<div style="margin-top: 2%">
+    <div class=" col-md-3  offset-md-3">
+    <form #form="ngForm" (ngSubmit)="submit(form)">
+        <div class="form-group ">
+            <label for="name">Nume</label>
+            <input 
+                required 
+                minlength="5" 
+                ngModel 
+                name="name" 
+                #name="ngModel"
+                id="name" 
+                type="text" 
+                class="form-control input-md">
+            <div 
+                class="alert alert-danger" 
+                *ngIf="name.touched && !name.valid">
+                <div *ngIf="name.errors.required">
+                    Numele este obligatoriu !
+                </div>
+                <div *ngIf="name.errors.minlength">
+                    Numele trebuie sa fie de minim  {{name.errors.minlength.requiredLength}} caractere !
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Parola</label>
+            <input 
+                required 
+                minlength="5" 
+                ngModel 
+                name="password" 
+                #password="ngModel" 
+                type="password"
+                id="password" 
+                class="form-control input-md">
+            <div 
+                class="alert alert-danger" 
+                *ngIf="password.touched && !password.valid">
+                <div *ngIf="password.errors.required">
+                   Parola este obligatorie !
+                </div>
+                <div *ngIf="password.errors.minlength">
+                    Parola trebuie sa fie de minim {{password.errors.minlength.requiredLength}} caractere !
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary">
+                Trimite
+            </button>
+        </div>
+    </form>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="col-md-4 offset-md-4">
+  <form #form="ngForm" (ngSubmit)="submit(form)">
+    <div class="form-group">
+      <label for="lastName">Nume</label>
+      <input
+        required
+        minlength="5"
+        ngModel
+        name="name"
+        #name="ngModel"
+        id="name"
+        type="text"
+        class="form-control input-md"
+      />
+      <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
+        <div *ngIf="name.errors.required">
+          Numele is required !
+        </div>
+        <div *ngIf="name.errors.minlength">
+          The name should be minimum
+          {{ name.errors.minlength.requiredLength }} characters !
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">CNP</label>
+      <input
+        required
+        minlength="10"
+        ngModel
+        name="cnp"
+        #cnp="ngModel"
+        type="text"
+        id="cnp"
+        class="form-control input-md"
+      />
+      <div class="alert alert-danger" *ngIf="cnp.touched && !cnp.valid">
+        <div *ngIf="cnp.errors.required">
+          Prenumele is required !
+        </div>
+        <div *ngIf="cnp.errors.minlength">
+          The cnp should be minimum
+          {{ cnp.errors.minlength.requiredLength }} characters !
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-primary">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

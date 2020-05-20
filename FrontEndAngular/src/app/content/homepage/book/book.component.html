@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row margin"  *ngFor="let book of childMessage | paginate: { itemsPerPage: 5, currentPage: pageNr, totalItems: totalNr }" routerLink="/book/{{book.id}}">
+        <div class="d-flex justify-content-start">
+            <img src={{book.image}}
+                height="150" width="100">
+            <div class="d-flex flex-column book">
+                <div> Nume: {{book.name}} </div>
+                <div> Autor: {{book.author}}</div>
+                <div> Data publicarii: {{book.date | date:"yyyy-MM-dd"}}</div>
+                <div> Gen: {{book.genre}}</div>
+                <div> Numar exemplare disponibile: {{book.free}}</div>
+            </div>
+        </div>
+    </div>
+
+    <pagination-template #p="paginationApi"
+        (pageChange)="pageChange?.emit($event)" class="pagination justify-content-end">
+
+            <div class="pagination-previous page-item " [class.disabled]="p.isFirstPage()">
+                <a class="page-link" *ngIf="!p.isFirstPage()" (click)="p.previous(); getPageInfo(pageNr - 1)"> Inapoi </a>
+            </div>
+    
+            <div *ngFor="let page of p.pages page-item" [class.current]="p.getCurrent() === page.value">
+                <a class="page-link" (click)="p.setCurrent(page.value); getPageInfo(page.value)" *ngIf="p.getCurrent() !== page.value">
+                    <span class="page-item">{{ page.label }}</span>
+                </a>
+                <div *ngIf="p.getCurrent() === page.value">
+                    <span class="page-item active page-link">{{ page.label }}</span>
+                </div>
+            </div>
+    
+            <div class="pagination-next page-item" [class.disabled]="p.isLastPage()">
+                <a class="page-link" *ngIf="!p.isLastPage()" (click)="p.next(); getPageInfo(pageNr + 1)"> Inainte </a>
+            </div>
+        
+    </pagination-template>
+
+</div>

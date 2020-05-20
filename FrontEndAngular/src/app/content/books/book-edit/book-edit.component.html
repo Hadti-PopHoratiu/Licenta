@@ -1,0 +1,106 @@
+<div style="margin-top: 2%">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-6 offset-md-3">
+
+<form #form="ngForm" (ngSubmit)="submit(form)">
+    <div class="form-group ">
+        <label for="name">Nume-editare</label>
+        <input 
+            required 
+            minlength="5" 
+            [(ngModel)] = "name"
+            name="name" 
+            id="name" 
+            type="text" 
+            class="form-control input-md">
+    </div>
+
+    <div class="form-group">
+        <label for="author">Autor</label>
+        <input 
+            required 
+            minlength="2" 
+            [(ngModel)] = "author"
+            name="author" 
+            type="text"
+            id="author" 
+            class="form-control input-md">
+    </div>
+
+    <div class="form-group">
+        <label for="date">Data</label>
+        <input 
+            required 
+            minlength="2" 
+            [(ngModel)] = "date"
+            name="date" 
+            type="text"
+            id="date" 
+            class="form-control input-md">
+    </div>
+
+    <div class="form-group">
+        <label for="genre">Gen</label>
+        <select [(ngModel)] = "bookGenre" name="genre" id="genre" class="custom-select" >
+            <option value="" disabled>Alege genul</option>
+            <option *ngFor="let genre of genres">{{genre}}</option>
+         </select>
+    </div>
+
+    <div class="form-group">
+        <label for="total">Nr Exemplare</label>
+        <input 
+            required 
+            minlength="2" 
+            [(ngModel)] = "total"
+            name="total" 
+            type="number"
+            id="total" 
+            class="form-control input-md">
+    </div>
+
+    <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input 
+            required 
+            minlength="2" 
+            [(ngModel)] = "isbn"
+            name="isbn" 
+            type="number"
+            id="isbn" 
+            class="form-control input-md">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Descriere</label>
+        <input 
+            required 
+            minlength="2" 
+            [(ngModel)] = "description"
+            name="description" 
+            type="text"
+            id="description" 
+            class="form-control input-md">
+    </div>
+
+    <div class="form-group">
+        <label for="image">Imagine</label>
+        <input 
+            required 
+            minlength="2" 
+            [(ngModel)] = "image"
+            name="image" 
+            type="text"
+            id="image" 
+            class="form-control input-md">
+    </div>
+
+    <div class="text-center">
+        <button class="btn btn-primary">
+            Submit
+        </button>
+    </div>
+</form>
+</div></div></div></div>
