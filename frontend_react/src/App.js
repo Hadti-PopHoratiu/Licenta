@@ -18,9 +18,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLogged: true,
+      isLogged: false,
     };
   }
+  componentDidMount() {
+    this.setState({
+      isLogged: localStorage.getItem("loggedIn"),
+    });
+    console.log(localStorage.getItem("loggedIn"));
+  }
+
   render() {
     return (
       <Router>
@@ -34,7 +41,7 @@ class App extends React.Component {
             <div className=" row col-md-8 offset-md-2">
               <Navbar.Brand>
                 <Link to="/" className="link">
-                  <i className="fas fa-book"></i> Biblioteca
+                  <i className="fas fa-book-open"></i> Biblioteca
                 </Link>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -82,13 +89,9 @@ class App extends React.Component {
               <Login />
             </Route>
 
-            <Route path="/table/:id">
-              <BookBorrow />
-            </Route>
+            <Route path="/table/:id" component={BookBorrow} />
 
-            <Route path="/book/:id">
-              <BookDetails />
-            </Route>
+            <Route path="/book/:id" component={BookDetails} />
 
             <Route path="/">
               <Home />

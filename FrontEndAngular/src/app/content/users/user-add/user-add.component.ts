@@ -1,27 +1,25 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { UsersService } from 'src/app/services/users.service';
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { UsersService } from "src/app/services/users.service";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-user-add',
-  templateUrl: './user-add.component.html',
-  styleUrls: ['./user-add.component.css']
+  selector: "app-user-add",
+  templateUrl: "./user-add.component.html",
+  styleUrls: ["./user-add.component.css"],
 })
 export class UserAddComponent implements OnInit {
-  @Output() refreshEvent = new EventEmitter<string>();
-  constructor(private user: UsersService) { }
+  constructor(private user: UsersService, private router: Router) {}
 
-  refresh;
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  sendRefresh() {
-    this.refreshEvent.emit(this.refresh)
-  }
-
-  submit(form){
+  submit(form) {
     this.user.addUser(form.value).subscribe(
-      res=>{ this.sendRefresh()},
-      err=>{ console.log(err)}
-    )
+      (res) => {
+        this.router.navigate(["../../../users"]);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
 }

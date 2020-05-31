@@ -1,5 +1,6 @@
 import React from "react";
 import { getGenres } from "../services/genreService";
+import { getBookById, editBookById } from "../services/bookService";
 
 class BookEdit extends React.Component {
   constructor(props) {
@@ -21,8 +22,32 @@ class BookEdit extends React.Component {
   }
 
   componentDidMount() {
+    getBookById(this.props.match.params.id).then(
+      (result) => {
+        console.log(result.author);
+        this.setState({
+          isLoaded: true,
+          name: result.name,
+          author: result.author,
+          date: result.date,
+          selectedGenre: result.genre,
+          bookTotal: result.total,
+          isbn: result.isbn,
+          description: result.description,
+          image: result.image,
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+
     getGenres().then(
       (result) => {
+        console.log(this.props.match.params.id);
         console.log(result);
         this.setState({
           isLoaded: true,
@@ -46,7 +71,16 @@ class BookEdit extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("A name was submitted: " + this.state);
+    editBookById(this.props.match.params.id, {
+      name: this.state.name,
+      author: this.state.author,
+      date: this.state.date,
+      genre: this.state.selectedGenre,
+      description: this.state.description,
+      isbn: this.state.isbn,
+      total: this.state.bookTotal,
+      image: this.state.image,
+    });
     event.preventDefault();
   }
 
@@ -70,11 +104,11 @@ class BookEdit extends React.Component {
               </div>
               <div className="form-group">
                 <label>
-                  CNP:
+                  Autor:
                   <input
                     type="text"
-                    name="cnp"
-                    value={this.state.value}
+                    name="author"
+                    value={this.state.author}
                     onChange={this.handleChange}
                     className="form-control input-md"
                   />
@@ -86,7 +120,7 @@ class BookEdit extends React.Component {
                   <input
                     type="text"
                     name="date"
-                    value={this.state.value}
+                    value={this.state.date}
                     onChange={this.handleChange}
                     className="form-control input-md"
                   />
@@ -94,9 +128,9 @@ class BookEdit extends React.Component {
                 <label>
                   Gen:
                   <select
-                    value={this.state.value}
+                    value={this.state.selectedGenre}
                     onChange={this.handleChange}
-                    name="date"
+                    name="selectedGenre"
                     className="form-control input-md"
                   >
                     <option value="" disabled>
@@ -112,7 +146,7 @@ class BookEdit extends React.Component {
                   <input
                     type="text"
                     name="bookTotal"
-                    value={this.state.value}
+                    value={this.state.bookTotal}
                     onChange={this.handleChange}
                     className="form-control input-md"
                   />
@@ -122,7 +156,7 @@ class BookEdit extends React.Component {
                   <input
                     type="text"
                     name="isbn"
-                    value={this.state.value}
+                    value={this.state.isbn}
                     onChange={this.handleChange}
                     className="form-control input-md"
                   />
@@ -132,7 +166,7 @@ class BookEdit extends React.Component {
                   <input
                     type="description"
                     name="date"
-                    value={this.state.value}
+                    value={this.state.description}
                     onChange={this.handleChange}
                     className="form-control input-md"
                   />
@@ -142,7 +176,7 @@ class BookEdit extends React.Component {
                   <input
                     type="text"
                     name="image"
-                    value={this.state.value}
+                    value={this.state.image}
                     onChange={this.handleChange}
                     className="form-control input-md"
                   />

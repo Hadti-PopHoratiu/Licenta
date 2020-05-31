@@ -18,3 +18,42 @@ export function addBook(body) {
     body: JSON.stringify(body),
   }).then((res) => res.json());
 }
+
+export function editBookById(id, body) {
+  return fetch(`http://localhost:4201/books/${id}`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  }).then((res) => res.json());
+}
+
+export function editBookCountUp(id, body) {
+  return fetch(`http://localhost:4201/books/${id}/bookCountUp`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  }).then((res) => res.json());
+}
+
+export function editBookCountDown(id, body) {
+  return fetch(`http://localhost:4201/books/${id}/bookCountDown`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  }).then((res) => res.json());
+}
+
+export function deleteBook(id) {
+  return fetch(`http://localhost:4201/books/${id}`, {
+    method: "DELETE",
+  }).then((res) => res.json());
+}

@@ -21,6 +21,7 @@ class Login extends React.Component {
 
   handleSubmit(event) {
     alert("A name was submitted: " + this.state.name + this.state.password);
+    localStorage.setItem("loggedIn", JSON.stringify(true));
     event.preventDefault();
   }
 

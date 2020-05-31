@@ -6,7 +6,7 @@ class UserAdd extends React.Component {
     super(props);
     this.state = {
       name: "",
-      cnp: 0,
+      cnp: "",
     };
 
     this.handleChange = this.handleChange.bind(this);

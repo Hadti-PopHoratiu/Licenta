@@ -1,7 +1,17 @@
 import React from "react";
 import "./users.css";
-import { getUsers, getUserTable } from "../services/userService";
-import { getBookById } from "../services/bookService";
+import {
+  getUserTable,
+  getUserFree,
+  addUserBook,
+  deleteUserBook,
+} from "../services/userService";
+import {
+  getBookById,
+  editBookCountUp,
+  editBookCountDown,
+} from "../services/bookService";
+import Pagination from "react-js-pagination";
 
 class BookBorrow extends React.Component {
   constructor(props) {
@@ -13,12 +23,43 @@ class BookBorrow extends React.Component {
       usedUsers: [],
       book: {},
       filter: "",
+      activePage: 1,
+      totalPages: 0,
     };
+    this.AddButtonCLicked = this.AddButtonCLicked.bind(this);
+    this.DeleteButtonClicked = this.DeleteButtonClicked.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    getUsers(1, this.state.filter).then(
+  async componentDidMount() {
+    await getBookById(this.props.match.params.id).then(
       (result) => {
+        console.log("book by id");
+        console.log(result);
+        this.setState({
+          isLoaded: true,
+          book: result,
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+
+    getUserFree(1, this.state.filter, this.state.book.name).then(
+      (result) => {
+        this.setState({
+          totalPages: 0,
+        });
+        if (Object.keys(result).length) {
+          this.setState({
+            totalPages: result[0].total,
+          });
+        }
         this.setState({
           isLoaded: true,
           freeUsers: result,
@@ -31,13 +72,161 @@ class BookBorrow extends React.Component {
         });
       }
     );
-    getBookById("5ebe6583ac98930f10ccd764").then(
+
+    getUserTable(this.state.book.name).then(
+      (result) => {
+        console.log("user table");
+        console.log(this.state.book);
+        console.log(result);
+        this.setState({
+          isLoaded: true,
+          usedUsers: result,
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+  }
+
+  async AddButtonCLicked(id) {
+    await addUserBook({ book: this.state.book.name }, id);
+    await editBookCountUp(this.state.book.id, {});
+    getUserTable(this.state.book.name).then(
       (result) => {
         this.setState({
           isLoaded: true,
-          book: result,
+          usedUsers: result,
         });
-        console.log(this.book);
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+
+    getUserFree(1, this.state.filter, this.state.book.name).then(
+      (result) => {
+        this.setState({
+          totalPages: 0,
+        });
+        if (Object.keys(result).length) {
+          this.setState({
+            totalPages: result[0].total,
+          });
+        }
+        this.setState({
+          isLoaded: true,
+          freeUsers: result,
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+  }
+
+  async DeleteButtonClicked(id) {
+    await deleteUserBook({ book: this.state.book.name }, id);
+    await editBookCountDown(this.state.book.id, {});
+    getUserFree(1, this.state.filter, this.state.book.name).then(
+      (result) => {
+        this.setState({
+          totalPages: 0,
+        });
+        if (Object.keys(result).length) {
+          this.setState({
+            totalPages: result[0].total,
+          });
+        }
+        this.setState({
+          isLoaded: true,
+          freeUsers: result,
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+
+    getUserTable(this.state.book.name).then(
+      (result) => {
+        this.setState({
+          isLoaded: true,
+          usedUsers: result,
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+  }
+
+  handlePageChange(pageNumber) {
+    console.log(`active page is ${pageNumber}`);
+    this.setState({ activePage: pageNumber });
+    getUserFree(pageNumber, this.state.filter, this.state.book.name).then(
+      (result) => {
+        this.setState({
+          totalPages: 0,
+        });
+        if (Object.keys(result).length) {
+          this.setState({
+            totalPages: result[0].total,
+          });
+        }
+        console.log(result);
+        this.setState({
+          isLoaded: true,
+          freeUsers: result,
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+  }
+
+  handleChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({ [name]: value });
+  }
+
+  handleSubmit(event) {
+    getUserFree(1, this.state.filter, this.state.book.name).then(
+      (result) => {
+        this.setState({
+          totalPages: 0,
+        });
+        if (Object.keys(result).length) {
+          this.setState({
+            totalPages: result[0].total,
+          });
+        }
+        console.log(result);
+        this.setState({
+          isLoaded: true,
+          freeUsers: result,
+        });
       },
       (error) => {
         this.setState({
@@ -49,7 +238,7 @@ class BookBorrow extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, freeUsers } = this.state;
+    const { error, isLoaded, freeUsers, book, usedUsers } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -66,13 +255,20 @@ class BookBorrow extends React.Component {
                     type="text"
                     placeholder="Search"
                     aria-label="Search"
+                    name="filter"
+                    value={this.state.filter}
+                    onChange={this.handleChange}
                   />
                   <div class="input-group-append">
                     <span
                       class="input-group-text amber lighten-3"
                       id="basic-text1"
                     >
-                      <i class="fas fa-search" aria-hidden="true"></i>
+                      <i
+                        class="fas fa-search"
+                        onClick={this.handleSubmit}
+                        aria-hidden="true"
+                      ></i>
                     </span>
                   </div>
                 </div>
@@ -89,9 +285,10 @@ class BookBorrow extends React.Component {
                         <td>{user.cnp}</td>
                         <td>
                           <button
+                            onClick={() => this.AddButtonCLicked(user.id)}
                             type="button"
                             className="btn btn-sm btn-success"
-                            id="edit"
+                            id="add"
                           >
                             Adauga
                           </button>
@@ -100,6 +297,16 @@ class BookBorrow extends React.Component {
                     </tbody>
                   ))}
                 </table>
+                <div className="d-flex justify-content-end">
+                  <Pagination
+                    prevPageText="Inapoi"
+                    nextPageText="Inainte"
+                    activePage={this.state.activePage}
+                    itemsCountPerPage={7}
+                    totalItemsCount={this.state.totalPages}
+                    onChange={this.handlePageChange.bind(this)}
+                  />
+                </div>
               </div>
               <div className="col-md-4">
                 <table className="table">
@@ -109,17 +316,18 @@ class BookBorrow extends React.Component {
                     <th>Carte imprumutata</th>
                     <th>Opiuni</th>
                   </thead>
-                  {freeUsers.map((user) => (
+                  {usedUsers.map((user) => (
                     <tbody key={user.name}>
                       <tr>
                         <td>{user.name} </td>
                         <td>{user.cnp}</td>
-                        <td>asa merge viata</td>
+                        <td>{book.name}</td>
                         <td>
                           <button
+                            onClick={() => this.DeleteButtonClicked(user.id)}
                             type="button"
                             className="btn btn-sm btn-danger"
-                            id="edit"
+                            id="delete"
                           >
                             Sterge
                           </button>

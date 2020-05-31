@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./table.css";
-import { getGenres } from "../services/genreService";
 import { getBooks } from "../services/bookService";
+import Pagination from "react-js-pagination";
 
 class Table extends React.Component {
   constructor(props) {
@@ -10,23 +10,41 @@ class Table extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      genres: [],
       books: [],
       genresFilter: [],
       isBook: true,
       isAuthor: false,
       filter: "",
-      pageNumber: 1,
+      activePage: 1,
+      totalPages: 0,
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
-    getGenres().then(
+    getBooks(
+      1,
+      this.state.filter,
+      this.state.isBook,
+      this.state.isAuthor,
+      this.state.genresFilter
+    ).then(
       (result) => {
         console.log(result);
         this.setState({
+          totalPages: 0,
+        });
+        if (Object.keys(result).length) {
+          this.setState({
+            totalPages: result[0].count,
+          });
+        }
+        console.log(result);
+        this.setState({
           isLoaded: true,
-          genres: result,
+          books: result,
         });
       },
       (error) => {
@@ -36,15 +54,82 @@ class Table extends React.Component {
         });
       }
     );
+  }
 
+  handlePageChange(pageNumber) {
+    console.log(`active page is ${pageNumber}`);
+    this.setState({ activePage: pageNumber });
     getBooks(
-      this.state.pageNumber,
+      pageNumber,
       this.state.filter,
       this.state.isBook,
       this.state.isAuthor,
       this.state.genresFilter
     ).then(
       (result) => {
+        this.setState({
+          totalPages: 0,
+        });
+        if (Object.keys(result).length) {
+          this.setState({
+            totalPages: result[0].count,
+          });
+        }
+        this.setState({
+          isLoaded: true,
+          books: result,
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+  }
+
+  handleChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    console.log(name);
+    console.log(value);
+    this.setState({ [name]: value });
+  }
+
+  handleOptionChange(event) {
+    console.log(event.target.value);
+    if (event.target.value === "book") {
+      this.setState({
+        isBook: true,
+        isAuthor: false,
+      });
+    } else {
+      this.setState({
+        isBook: false,
+        isAuthor: true,
+      });
+    }
+  }
+
+  handleSubmit(event) {
+    getBooks(
+      1,
+      this.state.filter,
+      this.state.isBook,
+      this.state.isAuthor,
+      this.state.genresFilter
+    ).then(
+      (result) => {
+        this.setState({
+          totalPages: 0,
+        });
+        if (Object.keys(result).length) {
+          this.setState({
+            totalPages: result[0].count,
+          });
+        }
         console.log(result);
         this.setState({
           isLoaded: true,
@@ -61,17 +146,7 @@ class Table extends React.Component {
   }
 
   render() {
-    const {
-      error,
-      isLoaded,
-      genres,
-      books,
-      genresFilter,
-      isBook,
-      isAuthor,
-      filter,
-      pageNumber,
-    } = this.state;
+    const { error, isLoaded, books } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -88,25 +163,40 @@ class Table extends React.Component {
                     type="text"
                     placeholder="Search"
                     aria-label="Search"
+                    name="filter"
+                    value={this.state.filter}
+                    onChange={this.handleChange}
                   />
                   <div className="input-group-append">
                     <span
                       className="input-group-text amber lighten-3"
                       id="basic-text1"
                     >
-                      <i className="fas fa-search" aria-hidden="true"></i>
+                      <i
+                        className="fas fa-search"
+                        onClick={this.handleSubmit}
+                        aria-hidden="true"
+                      ></i>
                     </span>
                   </div>
-                  <span className="align-middle">
+                  <span
+                    className="align-middle"
+                    onChange={this.handleOptionChange.bind(this)}
+                  >
                     <input
                       type="radio"
+                      name="secondFilter"
                       value="book"
+                      checked={this.state.isBook}
+                      className="margin-between"
                       className="margin-between"
                     />
                     <label for="male">Carte</label>
                     <input
                       type="radio"
+                      name="secondFilter"
                       value="author"
+                      checked={this.state.isAuthor}
                       className="margin-between"
                     />
                     <label for="female">Autor</label>
@@ -142,6 +232,16 @@ class Table extends React.Component {
                     </tr>
                   ))}
                 </table>
+                <div className="d-flex justify-content-end">
+                  <Pagination
+                    prevPageText="Inapoi"
+                    nextPageText="Inainte"
+                    activePage={this.state.activePage}
+                    itemsCountPerPage={5}
+                    totalItemsCount={this.state.totalPages}
+                    onChange={this.handlePageChange.bind(this)}
+                  />
+                </div>
               </div>
             </div>
           </div>

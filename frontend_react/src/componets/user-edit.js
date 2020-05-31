@@ -1,4 +1,5 @@
 import React from "react";
+import { getUserById, editUserById } from "../services/userService";
 
 class UserEdit extends React.Component {
   constructor(props) {
@@ -7,19 +8,27 @@ class UserEdit extends React.Component {
       name: "",
       cnp: 0,
     };
-    console.log("constructor");
-    console.log(this.props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
-    console.log("did mount");
-    console.log(this.props);
-    console.log("location");
-    console.log(this.props.location);
-    console.log("match");
-    console.log(this.props.match);
+    getUserById(this.props.match.params.id).then(
+      (result) => {
+        this.setState({
+          isLoaded: true,
+          name: result.name,
+          cnp: result.cnp,
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error,
+        });
+      }
+    );
+    console.log(this.props.match.params.id);
   }
 
   handleChange(event) {
@@ -30,7 +39,12 @@ class UserEdit extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("A name was submitted: " + this.state.name + this.state.cnp);
+    editUserById(this.props.match.params.id, {
+      name: this.state.name,
+      cnp: this.state.cnp,
+    });
+    console.log(this.props.history);
+    // this.props.history.push("../../users");
     event.preventDefault();
   }
 
@@ -58,7 +72,7 @@ class UserEdit extends React.Component {
                   <input
                     type="text"
                     name="cnp"
-                    value={this.state.value}
+                    value={this.state.cnp}
                     onChange={this.handleChange}
                     className="form-control input-md"
                   />
