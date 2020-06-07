@@ -69,3 +69,14 @@ export function deleteUser(id) {
     method: "DELETE",
   }).then((res) => res.json());
 }
+
+export function login(body) {
+  return fetch(`http://localhost:4201/users/login`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  }).then((res) => res.json());
+}

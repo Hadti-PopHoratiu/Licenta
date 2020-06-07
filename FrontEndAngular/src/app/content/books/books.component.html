@@ -16,7 +16,7 @@
               <th>Opiuni</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="text-format">
             <tr
               *ngFor="
                 let book of books
@@ -38,7 +38,7 @@
                   id="edit"
                   routerLink="edit/{{ book.id }}"
                 >
-                  Edit
+                  <i class="far fa-edit"></i>
                 </button>
                 <button
                   type="button"
@@ -46,7 +46,7 @@
                   id="edit"
                   (click)="deleteBook(book.id)"
                 >
-                  Delete
+                  <i class="far fa-trash-alt"></i>
                 </button>
               </td>
             </tr>

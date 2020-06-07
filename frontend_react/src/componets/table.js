@@ -205,7 +205,7 @@ class Table extends React.Component {
               </div>
               <div className="col-md-8 offset-md-2">
                 <table className="table table-striped custab">
-                  <thead>
+                  <thead class="thead-light">
                     <th>Carte</th>
                     <th>Autor</th>
                     <th>ISBN</th>
@@ -214,21 +214,23 @@ class Table extends React.Component {
                     <th>Detinatori curenti</th>
                   </thead>
                   {books.map((book) => (
-                    <tr key={book}>
+                    <tr key={book} className="text-format">
                       <td>{book.name}</td>
                       <td>{book.author}</td>
                       <td>{book.isbn}</td>
                       <td>{book.total}</td>
                       <td>{book.used}</td>
-                      <Link to={`/table/${book.id}`}>
-                        <button
-                          type="button"
-                          className="btn btn-success"
-                          routerLink="/table/{{book.id}}"
-                        >
-                          Deschide
-                        </button>
-                      </Link>
+                      <td>
+                        <Link to={`/table/${book.id}`}>
+                          <button
+                            type="button"
+                            className="btn btn-success"
+                            routerLink="/table/{{book.id}}"
+                          >
+                            <i class="fas fa-external-link-alt"></i>
+                          </button>
+                        </Link>
+                      </td>
                     </tr>
                   ))}
                 </table>

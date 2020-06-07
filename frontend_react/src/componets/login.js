@@ -1,4 +1,6 @@
 import React from "react";
+import "./login.css";
+import { login } from "../services/userService";
 
 class Login extends React.Component {
   constructor(props) {
@@ -20,17 +22,30 @@ class Login extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("A name was submitted: " + this.state.name + this.state.password);
-    localStorage.setItem("loggedIn", JSON.stringify(true));
+    login({ username: this.state.name, password: this.state.password }).then(
+      (result) => {
+        console.log(result.message);
+        if (result.message === "Date false") {
+          alert("date gresite");
+        } else {
+          localStorage.setItem("loggedIn", JSON.stringify(true));
+          this.props.updateLoggedInStatus();
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+
     event.preventDefault();
   }
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid page-up-margin">
         <div className="row">
-          <div className="col-md-2 offset-md-2">
-            <form onSubmit={this.handleSubmit}>
+          <div className="col-md-2 offset-md-5">
+            <form onSubmit={this.handleSubmit} className="text-format">
               <div className="form-group">
                 <label>
                   Nume:
@@ -58,7 +73,7 @@ class Login extends React.Component {
               <div className="text-center">
                 <input
                   type="submit"
-                  value="Submit"
+                  value="Trimite"
                   className="btn btn-primary"
                 />
               </div>

@@ -1,11 +1,20 @@
-.link {
-  color: white;
+body {
+  color: #383838 !important;
+  font-family: Helvetica, sans-serif !important;
 }
 
-.dropdown-link {
-  color: black;
+.menu a:link,
+.menu a:visited,
+.menu a:active,
+.menu a:hover {
+  color: white !important;
+  text-decoration: none !important;
 }
 
-.navbar-custom {
-  background-color: #32b232;
+.dropdownButoon a:link,
+.dropdownButoon a:visited,
+.dropdownButoon a:active,
+.dropdownButoon a:hover {
+  color: grey !important;
+  text-decoration: none !important;
 }

@@ -1,21 +1,19 @@
-<div style="margin-top: 2%">
-    <div class="container-fluid">
-        <div class="row margin">
-            <div class="col-md-8 offset-md-2">
-
-                <div class="d-flex justify-content-start">
-                    <img src={{book?.image}}
-                        height="150" width="100">
-                    <div class="d-flex flex-column book">
-                        <div> Numele cartii: {{book?.name}}</div>
-                        <div> Autor: {{book?.author}}</div>
-                        <div> Data publicarii: {{book?.date | date:"yyyy-MM-dd"}}</div>
-                        <div> Gen: {{book?.genre}}</div>
-                        <div> Numar exemplare disponibile: {{book?.free}}</div>
-                    </div>
-                </div>
-                <div>Description: {{book?.description}}</div>
-            </div>
+<div style="margin-top: 2%;">
+  <div class="container-fluid">
+    <div class="row margin">
+      <div class="col-md-8 offset-md-2">
+        <div class="d-flex justify-content-start">
+          <img src="{{ book?.image }}" height="150" width="100" />
+          <div class="d-flex flex-column book text-format">
+            <div>Numele cartii: {{ book?.name }}</div>
+            <div>Autor: {{ book?.author }}</div>
+            <div>Data publicarii: {{ book?.date | date: "yyyy-MM-dd" }}</div>
+            <div>Gen: {{ book?.genre }}</div>
+            <div>Numar exemplare disponibile: {{ book?.free }}</div>
+          </div>
         </div>
+        <div>Descriere: {{ book?.description }}</div>
+      </div>
     </div>
+  </div>
 </div>

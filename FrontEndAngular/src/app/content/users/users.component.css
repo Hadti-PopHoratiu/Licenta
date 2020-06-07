@@ -1,6 +1,6 @@
-thead th {
-  /* background-color: #32B232;
-    color: white; */
+.text-format {
+  color: #383838 !important;
+  font-family: Helvetica, sans-serif !important;
 }
 
 .btn-success,

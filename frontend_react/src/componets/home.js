@@ -190,7 +190,7 @@ class Home extends React.Component {
         <div className="page-up-margin">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-2 offset-md-2">
+              <div className="col-md-2 offset-md-2 genre-margin">
                 {genres.map((genre) => (
                   <div>
                     <input
@@ -199,7 +199,7 @@ class Home extends React.Component {
                       key={genre}
                       onChange={this.handleGenreFilterChange.bind(this)}
                     />
-                    {genre}
+                    <label>{genre}</label>
                   </div>
                 ))}
               </div>
@@ -250,13 +250,13 @@ class Home extends React.Component {
                   </span>
                 </div>
 
-                <div class="container-fluid">
+                <div className="container-fluid bookText">
                   {books.map((book) => (
-                    <div class="row margin" key={book}>
+                    <div className="row margin" key={book}>
                       <Link to={`/book/${book.id}`}>
-                        <div class="d-flex justify-content-start">
+                        <div className="d-flex justify-content-start">
                           <img src={book.image} height="150" width="100" />
-                          <div class="d-flex flex-column book">
+                          <div className="d-flex flex-column book">
                             <div> Nume: {book.name} </div>
                             <div> Autor: {book.author}</div>
                             <div> Data publicarii: {book.date}</div>

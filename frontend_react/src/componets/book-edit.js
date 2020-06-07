@@ -1,4 +1,5 @@
 import React from "react";
+import "./book-add.css";
 import { getGenres } from "../services/genreService";
 import { getBookById, editBookById } from "../services/bookService";
 
@@ -80,15 +81,17 @@ class BookEdit extends React.Component {
       isbn: this.state.isbn,
       total: this.state.bookTotal,
       image: this.state.image,
+    }).then((result) => {
+      this.props.history.push("/books");
     });
     event.preventDefault();
   }
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid page-up-margin">
         <div className="row">
-          <div className="col-md-2 offset-md-2">
+          <div className="col-md-2 offset-md-5">
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
                 <label>
@@ -185,7 +188,7 @@ class BookEdit extends React.Component {
               <div className="text-center">
                 <input
                   type="submit"
-                  value="Submit"
+                  value="Trimite"
                   className="btn btn-primary"
                 />
               </div>

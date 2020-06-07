@@ -1,12 +1,17 @@
-.margin{
-    margin-bottom: 10px;
+.margin {
+  margin-bottom: 10px;
 }
-.margin-between{
-    margin-top:10px;
-    margin-left: 10px;
-    margin-right: 10px;
+.margin-between {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
+}
+
+.text-format {
+  color: #383838 !important;
+  font-family: Helvetica, sans-serif !important;
 }

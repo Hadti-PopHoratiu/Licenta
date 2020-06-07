@@ -170,14 +170,14 @@ class Users extends React.Component {
                   </div>
                 </div>
                 <table className="table">
-                  <thead className="thead-light">
+                  <thead className="thead-light ">
                     <th>Nume</th>
                     <th>CNP</th>
                     <th>Carti</th>
                     <th>Opiuni</th>
                   </thead>
                   {items.map((user) => (
-                    <tbody key={user.name}>
+                    <tbody key={user.name} className="text-format">
                       <tr>
                         <td>{user.name} </td>
                         <td>{user.cnp}</td>
@@ -193,7 +193,7 @@ class Users extends React.Component {
                               className="btn btn-sm btn-info"
                               id="edit"
                             >
-                              Edit
+                              <i class="far fa-edit"></i>
                             </button>
                           </Link>
                           <button
@@ -202,7 +202,7 @@ class Users extends React.Component {
                             className="btn btn-sm btn-danger"
                             id="edit"
                           >
-                            Delete
+                            <i class="far fa-trash-alt"></i>
                           </button>
                         </td>
                       </tr>

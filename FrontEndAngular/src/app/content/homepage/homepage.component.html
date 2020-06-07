@@ -1,13 +1,20 @@
-<div style="margin-top: 2%">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2 offset-md-2">
-                <app-genres (genreEvent)="receiveGenre($event)"></app-genres>
-            </div>
-            <div class="col-md-6">
-                <app-search (messageEvent)="receiveMessage($event)" (radioEvent)="receiveFilter($event)"></app-search>
-                <app-book [childMessage]="parentMessage" [totalNr]="totalPages" (pageEvent)="receivePage($event)"></app-book>
-            </div>
-        </div>
+<div style="margin-top: 2%;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 offset-md-2 text-format">
+        <app-genres (genreEvent)="receiveGenre($event)"></app-genres>
+      </div>
+      <div class="col-md-6 text-format">
+        <app-search
+          (messageEvent)="receiveMessage($event)"
+          (radioEvent)="receiveFilter($event)"
+        ></app-search>
+        <app-book
+          [childMessage]="parentMessage"
+          [totalNr]="totalPages"
+          (pageEvent)="receivePage($event)"
+        ></app-book>
+      </div>
     </div>
+  </div>
 </div>

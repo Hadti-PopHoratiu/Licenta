@@ -279,7 +279,7 @@ class BookBorrow extends React.Component {
                     <th>Opiuni</th>
                   </thead>
                   {freeUsers.map((user) => (
-                    <tbody key={user.name}>
+                    <tbody key={user.name} className="text-format">
                       <tr>
                         <td>{user.name} </td>
                         <td>{user.cnp}</td>
@@ -290,7 +290,7 @@ class BookBorrow extends React.Component {
                             className="btn btn-sm btn-success"
                             id="add"
                           >
-                            Adauga
+                            <i class="fas fa-plus"></i>
                           </button>
                         </td>
                       </tr>
@@ -317,7 +317,7 @@ class BookBorrow extends React.Component {
                     <th>Opiuni</th>
                   </thead>
                   {usedUsers.map((user) => (
-                    <tbody key={user.name}>
+                    <tbody key={user.name} className="text-format">
                       <tr>
                         <td>{user.name} </td>
                         <td>{user.cnp}</td>
@@ -329,7 +329,7 @@ class BookBorrow extends React.Component {
                             className="btn btn-sm btn-danger"
                             id="delete"
                           >
-                            Sterge
+                            <i class="far fa-trash-alt"></i>
                           </button>
                         </td>
                       </tr>

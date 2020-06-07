@@ -1,4 +1,9 @@
-<div *ngFor='let genre of genres' class="active">
-    <input type="checkbox" id="vehicle1" name="vehicle1" (change)="onChange(genre, $event.target.checked)">
-    {{genre}}
+<div *ngFor="let genre of genres" class="active genre-margin">
+  <input
+    type="checkbox"
+    id="genre"
+    name="genre"
+    (change)="onChange(genre, $event.target.checked)"
+  />
+  <label>{{ genre }}</label>
 </div>

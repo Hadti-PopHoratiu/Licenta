@@ -1,4 +1,5 @@
 import React from "react";
+import "./user-add.css";
 import { addUser } from "../services/userService";
 
 class UserAdd extends React.Component {
@@ -21,15 +22,17 @@ class UserAdd extends React.Component {
   }
 
   handleSubmit(event) {
-    addUser({ name: this.state.name, cnp: this.state.cnp });
+    addUser({ name: this.state.name, cnp: this.state.cnp }).then((result) => {
+      this.props.history.push("/users");
+    });
     event.preventDefault();
   }
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid page-up-margin">
         <div className="row">
-          <div className="col-md-2 offset-md-2">
+          <div className="col-md-2 offset-md-5">
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
                 <label>
@@ -58,7 +61,7 @@ class UserAdd extends React.Component {
               <div className="text-center">
                 <input
                   type="submit"
-                  value="Submit"
+                  value="Trimite"
                   className="btn btn-primary"
                 />
               </div>

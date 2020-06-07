@@ -1,4 +1,5 @@
 import React from "react";
+import "./user-edit.css";
 import { getUserById, editUserById } from "../services/userService";
 
 class UserEdit extends React.Component {
@@ -42,17 +43,19 @@ class UserEdit extends React.Component {
     editUserById(this.props.match.params.id, {
       name: this.state.name,
       cnp: this.state.cnp,
+    }).then((result) => {
+      this.props.history.push("/users");
     });
     console.log(this.props.history);
-    // this.props.history.push("../../users");
+
     event.preventDefault();
   }
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container page-up-margin">
         <div className="row">
-          <div className="col-md-2 offset-md-2">
+          <div className="offset-md-5">
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
                 <label>
@@ -81,7 +84,7 @@ class UserEdit extends React.Component {
               <div className="text-center">
                 <input
                   type="submit"
-                  value="Submit"
+                  value="Trimite"
                   className="btn btn-primary"
                 />
               </div>

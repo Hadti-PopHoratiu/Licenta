@@ -1,3 +1,8 @@
-.margin{
-    margin-bottom: 10px;
+.margin {
+  margin-bottom: 10px;
+}
+
+.text-format {
+  color: #383838 !important;
+  font-family: Helvetica, sans-serif !important;
 }

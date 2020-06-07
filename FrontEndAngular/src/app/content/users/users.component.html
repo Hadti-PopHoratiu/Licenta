@@ -10,7 +10,7 @@
             <th>Carti</th>
             <th>Opiuni</th>
           </thead>
-          <tbody *ngIf="book">
+          <tbody *ngIf="book" class="text-format">
             <tr
               *ngFor="
                 let user of users
@@ -34,7 +34,7 @@
                   id="edit"
                   routerLink="edit/{{ user.id }}"
                 >
-                  Edit
+                  <i class="far fa-edit"></i>
                 </button>
                 <button
                   type="button"
@@ -42,7 +42,7 @@
                   id="edit"
                   (click)="deleteUser(user.id)"
                 >
-                  Delete
+                  <i class="far fa-trash-alt"></i>
                 </button>
               </td>
             </tr>

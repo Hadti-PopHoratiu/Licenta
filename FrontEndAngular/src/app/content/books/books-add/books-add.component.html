@@ -1,186 +1,119 @@
-<div class="col-md-4 offset-md-4">
-  <form #form="ngForm" (ngSubmit)="submit(form)">
-    <div class="form-group">
-      <label for="name">Nume</label>
-      <input
-        required
-        minlength="5"
-        ngModel
-        name="name"
-        #name="ngModel"
-        id="name"
-        type="text"
-        class="form-control input-md"
-      />
-      <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
-        <div *ngIf="name.errors.required">
-          Numele is required !
-        </div>
-        <div *ngIf="name.errors.minlength">
-          The name should be minimum
-          {{ name.errors.minlength.requiredLength }} characters !
-        </div>
+<div style="margin-top: 2%;">
+  <div class="col-md-4 offset-md-4">
+    <form #form="ngForm" (ngSubmit)="submit(form)">
+      <div class="form-group">
+        <label for="name">Nume</label>
+        <input
+          required
+          minlength="5"
+          ngModel
+          name="name"
+          #name="ngModel"
+          id="name"
+          type="text"
+          class="form-control input-md"
+        />
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="author">Autor</label>
-      <input
-        required
-        minlength="2"
-        ngModel
-        name="author"
-        #author="ngModel"
-        type="text"
-        id="author"
-        class="form-control input-md"
-      />
-      <div class="alert alert-danger" *ngIf="author.touched && !author.valid">
-        <div *ngIf="author.errors.required">
-          Prenumele is required !
-        </div>
-        <div *ngIf="author.errors.minlength">
-          The author should be minimum
-          {{ author.errors.minlength.requiredLength }} characters !
-        </div>
+      <div class="form-group">
+        <label for="author">Autor</label>
+        <input
+          required
+          minlength="2"
+          ngModel
+          name="author"
+          #author="ngModel"
+          type="text"
+          id="author"
+          class="form-control input-md"
+        />
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="date">Data</label>
-      <input
-        required
-        minlength="2"
-        ngModel
-        name="date"
-        #date="ngModel"
-        type="text"
-        id="date"
-        class="form-control input-md"
-      />
-      <div class="alert alert-danger" *ngIf="date.touched && !date.valid">
-        <div *ngIf="date.errors.required">
-          Prenumele is required !
-        </div>
-        <div *ngIf="date.errors.minlength">
-          The date should be minimum
-          {{ date.errors.minlength.requiredLength }} characters !
-        </div>
+      <div class="form-group">
+        <label for="date">Data</label>
+        <input
+          required
+          minlength="2"
+          ngModel
+          name="date"
+          #date="ngModel"
+          type="text"
+          id="date"
+          class="form-control input-md"
+        />
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="genre">Gen</label>
-      <select ngModel name="genre" id="genre" class="custom-select">
-        <option value="" disabled>Alege genul</option>
-        <option *ngFor="let genre of genres" [value]="genre">{{
-          genre
-        }}</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="bookCount">Nr Exemplare</label>
-      <input
-        required
-        minlength="2"
-        ngModel
-        name="bookCount"
-        #bookCount="ngModel"
-        type="number"
-        id="bookCount"
-        class="form-control input-md"
-      />
-      <div
-        class="alert alert-danger"
-        *ngIf="bookCount.touched && !bookCount.valid"
-      >
-        <div *ngIf="bookCount.errors.required">
-          Prenumele is required !
-        </div>
-        <div *ngIf="bookCount.errors.minlength">
-          The bookCount should be minimum
-          {{ bookCount.errors.minlength.requiredLength }} characters !
-        </div>
+      <div class="form-group">
+        <label for="genre">Gen</label>
+        <select ngModel name="genre" id="genre" class="custom-select">
+          <option value="" disabled>Alege genul</option>
+          <option *ngFor="let genre of genres" [value]="genre">{{
+            genre
+          }}</option>
+        </select>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="isbn">ISBN</label>
-      <input
-        required
-        minlength="2"
-        ngModel
-        name="isbn"
-        #isbn="ngModel"
-        type="number"
-        id="isbn"
-        class="form-control input-md"
-      />
-      <div class="alert alert-danger" *ngIf="isbn.touched && !isbn.valid">
-        <div *ngIf="isbn.errors.required">
-          Prenumele is required !
-        </div>
-        <div *ngIf="isbn.errors.minlength">
-          The isbn should be minimum
-          {{ isbn.errors.minlength.requiredLength }} characters !
-        </div>
+      <div class="form-group">
+        <label for="bookCount">Nr Exemplare</label>
+        <input
+          required
+          minlength="2"
+          ngModel
+          name="bookCount"
+          #bookCount="ngModel"
+          type="number"
+          id="bookCount"
+          class="form-control input-md"
+        />
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="description">Descriere</label>
-      <input
-        required
-        minlength="2"
-        ngModel
-        name="description"
-        #description="ngModel"
-        type="text"
-        id="description"
-        class="form-control input-md"
-      />
-      <div
-        class="alert alert-danger"
-        *ngIf="description.touched && !description.valid"
-      >
-        <div *ngIf="description.errors.required">
-          Prenumele is required !
-        </div>
-        <div *ngIf="description.errors.minlength">
-          The description should be minimum
-          {{ description.errors.minlength.requiredLength }} characters !
-        </div>
+      <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input
+          required
+          minlength="2"
+          ngModel
+          name="isbn"
+          #isbn="ngModel"
+          type="number"
+          id="isbn"
+          class="form-control input-md"
+        />
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="image">Imagine</label>
-      <input
-        required
-        minlength="2"
-        ngModel
-        name="image"
-        #image="ngModel"
-        type="text"
-        id="image"
-        class="form-control input-md"
-      />
-      <div class="alert alert-danger" *ngIf="image.touched && !image.valid">
-        <div *ngIf="image.errors.required">
-          Prenumele is required !
-        </div>
-        <div *ngIf="image.errors.minlength">
-          The image should be minimum
-          {{ image.errors.minlength.requiredLength }} characters !
-        </div>
+      <div class="form-group">
+        <label for="description">Descriere</label>
+        <input
+          required
+          minlength="2"
+          ngModel
+          name="description"
+          #description="ngModel"
+          type="text"
+          id="description"
+          class="form-control input-md"
+        />
       </div>
-    </div>
 
-    <div class="text-center">
-      <button class="btn btn-primary">
-        Submit
-      </button>
-    </div>
-  </form>
+      <div class="form-group">
+        <label for="image">Imagine</label>
+        <input
+          required
+          minlength="2"
+          ngModel
+          name="image"
+          #image="ngModel"
+          type="text"
+          id="image"
+          class="form-control input-md"
+        />
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-primary">
+          Trimite
+        </button>
+      </div>
+    </form>
+  </div>
 </div>

@@ -242,7 +242,7 @@ class Books extends React.Component {
                     <th>Opiuni</th>
                   </thead>
                   {books.map((book) => (
-                    <tbody key={book.name}>
+                    <tbody key={book.name} className="text-format">
                       <tr>
                         <td>{book.name} </td>
                         <td>{book.author}</td>
@@ -254,7 +254,7 @@ class Books extends React.Component {
                               className="btn btn-sm btn-info"
                               id="edit"
                             >
-                              Edit
+                              <i class="far fa-edit"></i>
                             </button>
                           </Link>
                           <button
@@ -263,7 +263,7 @@ class Books extends React.Component {
                             className="btn btn-sm btn-danger"
                             id="edit"
                           >
-                            Delete
+                            <i class="far fa-trash-alt"></i>
                           </button>
                         </td>
                       </tr>

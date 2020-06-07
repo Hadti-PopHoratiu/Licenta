@@ -1,6 +1,12 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
 import Home from "./componets/home";
 import Users from "./componets/users";
 import Books from "./componets/books";
@@ -12,6 +18,7 @@ import BookDetails from "./componets/book-details";
 import BookBorrow from "./componets/book-borrow";
 import BookAdd from "./componets/book-add";
 import UserAdd from "./componets/user-add";
+import { login } from "./services/userService";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 class App extends React.Component {
@@ -20,12 +27,30 @@ class App extends React.Component {
     this.state = {
       isLogged: false,
     };
+    this.updateLoggedInStatus = this.updateLoggedInStatus.bind(this);
+    this.handleLogoutClick = this.handleLogoutClick.bind(this);
   }
   componentDidMount() {
     this.setState({
       isLogged: localStorage.getItem("loggedIn"),
     });
     console.log(localStorage.getItem("loggedIn"));
+  }
+
+  updateLoggedInStatus() {
+    if (localStorage.getItem("loggedIn")) {
+      this.setState({
+        isLogged: localStorage.getItem("loggedIn"),
+      });
+    }
+  }
+
+  handleLogoutClick() {
+    console.log("clicked disconnect");
+    localStorage.clear();
+    this.setState({
+      isLogged: false,
+    });
   }
 
   render() {
@@ -36,9 +61,10 @@ class App extends React.Component {
             collapseOnSelect
             expand="lg"
             variant="dark"
+            bg="dark"
             className="navbar-custom no-gutters"
           >
-            <div className=" row col-md-8 offset-md-2">
+            <div className=" row col-md-8 offset-md-2 menu">
               <Navbar.Brand>
                 <Link to="/" className="link">
                   <i className="fas fa-book-open"></i> Biblioteca
@@ -49,11 +75,20 @@ class App extends React.Component {
                 <Nav className="mr-auto">
                   <CheckIfLogged isLoggedIn={this.state.isLogged} />
                 </Nav>
-                <Nav.Link>
-                  <Link to="/login" className="link">
-                    Conectare
-                  </Link>
-                </Nav.Link>
+                {/* <CheckLoggedButton isLoggedIn={this.state.isLogged} /> */}
+                {this.state.isLogged ? (
+                  <Nav.Link onClick={this.handleLogoutClick}>
+                    <Link to="/" className="link">
+                      Deconectare
+                    </Link>
+                  </Nav.Link>
+                ) : (
+                  <Nav.Link>
+                    <Link to="/login" className="link">
+                      Conectare
+                    </Link>
+                  </Nav.Link>
+                )}
               </Navbar.Collapse>
             </div>
           </Navbar>
@@ -63,19 +98,22 @@ class App extends React.Component {
           <Switch>
             <Route path="/users/edit/:id" component={UserEdit} />
 
-            <Route path="/users/add">
-              <UserAdd />
-            </Route>
+            <Route path="/users/add" component={UserAdd} />
 
-            <Route path="/users">
+            <PrivateRoute path="/users" isLogged={this.state.isLogged}>
               <Users />
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/books/edit/:id" component={BookEdit} />
+            <PrivateRoute
+              path="/books/edit/:id"
+              isLogged={this.state.isLogged}
+              component={BookEdit}
+            >
+              <BookEdit />
+            </PrivateRoute>
+            {/* <Route path="/books/edit/:id" component={BookEdit} /> */}
 
-            <Route path="/books/add">
-              <BookAdd />
-            </Route>
+            <Route path="/books/add" component={BookAdd} />
 
             <Route path="/books">
               <Books />
@@ -86,7 +124,13 @@ class App extends React.Component {
             </Route>
 
             <Route path="/login">
-              <Login />
+              {this.state.isLogged ? (
+                <Redirect to="/" />
+              ) : (
+                <Login updateLoggedInStatus={this.updateLoggedInStatus} />
+              )}
+
+              {/*  */}
             </Route>
 
             <Route path="/table/:id" component={BookBorrow} />
@@ -107,24 +151,24 @@ function LoggedIn(props) {
   return (
     <Nav>
       <NavDropdown title="Utilizatori" id="collasible-nav-dropdown">
-        <NavDropdown.Item>
+        <NavDropdown.Item className="dropdownButoon">
           <Link to="/users" className="dropdown-link">
             Lista utilizatori
           </Link>
         </NavDropdown.Item>
-        <NavDropdown.Item>
+        <NavDropdown.Item className="dropdownButoon">
           <Link to="/users/add" className="dropdown-link">
             Adauga utilizator
           </Link>
         </NavDropdown.Item>
       </NavDropdown>
       <NavDropdown title="Carti" id="collasible-nav-dropdown">
-        <NavDropdown.Item>
+        <NavDropdown.Item className="dropdownButoon">
           <Link to="/books" className="dropdown-link">
             Lista carti
           </Link>
         </NavDropdown.Item>
-        <NavDropdown.Item>
+        <NavDropdown.Item className="dropdownButoon">
           <Link to="/books/add" className="dropdown-link">
             Adauga carte
           </Link>
@@ -150,4 +194,18 @@ function CheckIfLogged(props) {
   }
   return <LoggedOut />;
 }
+
+function PrivateRoute({ children, isLogged, ...rest }) {
+  console.log(rest);
+  return isLogged ? (
+    <Route {...rest} render={() => children} />
+  ) : (
+    <Redirect
+      to={{
+        pathname: "/login",
+      }}
+    />
+  );
+}
+
 export default App;

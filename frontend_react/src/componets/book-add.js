@@ -1,4 +1,5 @@
 import React from "react";
+import "./book-add.css";
 import { getGenres } from "../services/genreService";
 import { addBook } from "../services/bookService";
 
@@ -56,16 +57,18 @@ class BookAdd extends React.Component {
       isbn: this.state.isbn,
       total: this.state.bookTotal,
       image: this.state.image,
+    }).then((result) => {
+      this.props.history.push("/books");
     });
     event.preventDefault();
   }
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid page-up-margin">
         <div className="row">
-          <div className="col-md-2 offset-md-2">
-            <form onSubmit={this.handleSubmit}>
+          <div className="col-md-2 offset-md-5">
+            <form onSubmit={this.handleSubmit} className="text-format">
               <div className="form-group">
                 <label>
                   Nume:
@@ -161,7 +164,7 @@ class BookAdd extends React.Component {
               <div className="text-center">
                 <input
                   type="submit"
-                  value="Submit"
+                  value="Trimite"
                   className="btn btn-primary"
                 />
               </div>

@@ -34,3 +34,8 @@
 .pagination > li:last-child > span {
   border-radius: unset;
 }
+
+.text-format {
+  color: #383838 !important;
+  font-family: Helvetica, sans-serif !important;
+}
