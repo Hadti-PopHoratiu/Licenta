@@ -71,7 +71,6 @@ addBook = function (body) {
 };
 
 editBook = function (id, body) {
-  console.log(body);
   return bookModel.updateOne({ _id: id }, body).exec();
 };
 
@@ -90,7 +89,6 @@ editBookUsedCountDown = async function (id) {
 };
 
 deleteBook = function (id, body) {
-  console.log(body);
   return bookModel.deleteOne({ _id: id }).exec();
 };
 

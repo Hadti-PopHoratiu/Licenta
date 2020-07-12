@@ -31,7 +31,6 @@ class Users extends React.Component {
             totalPages: result[0].total,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           items: result,
@@ -58,7 +57,6 @@ class Users extends React.Component {
             totalPages: result[0].total,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           items: result,
@@ -74,7 +72,6 @@ class Users extends React.Component {
   }
 
   handlePageChange(pageNumber) {
-    console.log(`active page is ${pageNumber}`);
     this.setState({ activePage: pageNumber });
     getUsers(pageNumber, this.state.filter).then(
       (result) => {
@@ -86,7 +83,6 @@ class Users extends React.Component {
             totalPages: result[0].total,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           items: result,
@@ -119,7 +115,6 @@ class Users extends React.Component {
             totalPages: result[0].total,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           items: result,
@@ -156,16 +151,15 @@ class Users extends React.Component {
                     value={this.state.filter}
                     onChange={this.handleChange}
                   />
-                  <div className="input-group-append">
+                  <div
+                    className="input-group-append"
+                    onClick={this.handleSubmit}
+                  >
                     <span
                       className="input-group-text amber lighten-3"
                       id="basic-text1"
                     >
-                      <i
-                        className="fas fa-search"
-                        onClick={this.handleSubmit}
-                        aria-hidden="true"
-                      ></i>
+                      <i className="fas fa-search" aria-hidden="true"></i>
                     </span>
                   </div>
                 </div>

@@ -29,7 +29,6 @@ class UserEdit extends React.Component {
         });
       }
     );
-    console.log(this.props.match.params.id);
   }
 
   handleChange(event) {
@@ -46,7 +45,6 @@ class UserEdit extends React.Component {
     }).then((result) => {
       this.props.history.push("/users");
     });
-    console.log(this.props.history);
 
     event.preventDefault();
   }

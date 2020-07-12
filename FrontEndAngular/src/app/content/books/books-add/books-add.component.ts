@@ -40,6 +40,5 @@ export class BooksAddComponent implements OnInit {
         },
         (err) => {}
       );
-    console.log(form.value);
   }
 }

@@ -17,9 +17,7 @@ export class UserAddComponent implements OnInit {
       (res) => {
         this.router.navigate(["../../../users"]);
       },
-      (err) => {
-        console.log(err);
-      }
+      (err) => {}
     );
   }
 }

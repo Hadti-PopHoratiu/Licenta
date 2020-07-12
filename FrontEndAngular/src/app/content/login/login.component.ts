@@ -29,14 +29,12 @@ export class LoginComponent implements OnInit {
       .login({ username: form.value.name, password: form.value.password })
       .subscribe(
         (res) => {
-          console.log(res);
           localStorage.setItem("logged", JSON.stringify(true));
           this.auth.setAuth();
           this.router.navigate([""]);
         },
         (err) => {
           alert("date gresite");
-          console.log(err);
         }
       );
   }

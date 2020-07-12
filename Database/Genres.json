@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "5ea9aae35ac84bf7291d83d7"
+  },
+  "genre": [
+    "Aventura",
+    "Actiune",
+    "Muzica",
+    "Educatie",
+    "Tehnologie",
+    "Drama",
+    "Finante",
+    "Istorie",
+    "Biografii",
+    "Fictiune",
+    "Fitness",
+    "Arta",
+    "Stiinte"
+  ]
+}]

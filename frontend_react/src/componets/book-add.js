@@ -25,7 +25,6 @@ class BookAdd extends React.Component {
   componentDidMount() {
     getGenres().then(
       (result) => {
-        console.log(result);
         this.setState({
           isLoaded: true,
           genres: result,

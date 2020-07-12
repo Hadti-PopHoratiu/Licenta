@@ -9,14 +9,11 @@ class BookDetails extends React.Component {
       isLoaded: false,
       bookInfo: [],
     };
-    console.log("constructor");
-    console.log(this.props);
   }
 
   componentDidMount() {
     getBookById(this.props.match.params.id).then(
       (result) => {
-        console.log(result);
         this.setState({
           isLoaded: true,
           bookInfo: result,
@@ -29,8 +26,6 @@ class BookDetails extends React.Component {
         });
       }
     );
-
-    console.log(this.props.match.params.id);
   }
 
   render() {
@@ -47,8 +42,8 @@ class BookDetails extends React.Component {
               <div className="d-flex justify-content-start">
                 <img src={bookInfo.image} height="150" width="100" />
                 <div className="d-flex flex-column book text-format">
-                  <div> Numele cartii: {bookInfo?.name}}</div>
-                  <div> Autor: bookInfo.author}}</div>
+                  <div> Numele cartii: {bookInfo?.name}</div>
+                  <div> Autor: {bookInfo.author}</div>
                   <div> Data publicarii: {bookInfo.date}</div>
                   <div> Gen: {bookInfo.genre}</div>
                   <div> Numar exemplare disponibile: {bookInfo.free}</div>

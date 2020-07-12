@@ -28,7 +28,6 @@ class Home extends React.Component {
   componentDidMount() {
     getGenres().then(
       (result) => {
-        console.log(result);
         this.setState({
           isLoaded: true,
           genres: result,
@@ -58,7 +57,6 @@ class Home extends React.Component {
             totalPages: result[0].count,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           books: result,
@@ -74,7 +72,6 @@ class Home extends React.Component {
   }
 
   handlePageChange(pageNumber) {
-    console.log(`active page is ${pageNumber}`);
     this.setState({ activePage: pageNumber });
     getBooks(
       pageNumber,
@@ -110,13 +107,10 @@ class Home extends React.Component {
     const target = event.target;
     const value = target.value;
     const name = target.name;
-    console.log(name);
-    console.log(value);
     this.setState({ [name]: value });
   }
 
   handleOptionChange(event) {
-    console.log(event.target.value);
     if (event.target.value === "book") {
       this.setState({
         isBook: true,
@@ -147,7 +141,6 @@ class Home extends React.Component {
             totalPages: result[0].count,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           books: result,
@@ -176,7 +169,6 @@ class Home extends React.Component {
     this.setState({
       genresFilter: arr,
     });
-    console.log(this.state.genresFilter);
   }
 
   render() {
@@ -215,16 +207,12 @@ class Home extends React.Component {
                     value={this.state.filter}
                     onChange={this.handleChange}
                   />
-                  <div class="input-group-append">
+                  <div class="input-group-append" onClick={this.handleSubmit}>
                     <span
                       class="input-group-text amber lighten-3"
                       id="basic-text1"
                     >
-                      <i
-                        class="fas fa-search"
-                        onClick={this.handleSubmit}
-                        aria-hidden="true"
-                      ></i>
+                      <i class="fas fa-search" aria-hidden="true"></i>
                     </span>
                   </div>
                   <span

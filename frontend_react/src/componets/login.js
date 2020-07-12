@@ -24,7 +24,6 @@ class Login extends React.Component {
   handleSubmit(event) {
     login({ username: this.state.name, password: this.state.password }).then(
       (result) => {
-        console.log(result.message);
         if (result.message === "Date false") {
           alert("date gresite");
         } else {

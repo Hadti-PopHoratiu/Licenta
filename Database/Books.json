@@ -1,0 +1,256 @@
+[{
+  "_id": {
+    "$oid": "5ea832971bdf3e24e818b526"
+  },
+  "name": "Fenomenul Pitesti",
+  "author": "VIRGIL IERUNCA",
+  "date": {
+    "$date": "2018-04-27T21:00:00Z"
+  },
+  "genre": "Istorie",
+  "description": "Ceea ce s-a petrecut la inchisoarea din Pitesti intre 1949 si 1952 merita un loc aparte in inspaimantatorul repertoriu al ororilor concentrationare ale veacului al XX-lea.  \"Fenomenul Pitesti\" apartine aceluiasi registru, la care vine insa cu o trasatura specifica: utilizarea sistematica a torturarii detinutilor de catre alti detinuti. Ideea ii apartine pedagogului sovietic Makarenko (1888 - 1939), specialist in delincventa juvenila si partizan al reeducarii detinutilor tineri cu ajutorul detinutilor mai vechi, aflati pe calea cea buna, dar facand parte din aceeasi clasa de varsta.  Virgil Ierunca povesteste una dintre cele mai cumplite experiente de dezumanizare pe care le-a cunoscut epoca noastra. Detinuti torturati cu un sadism de-a dreptul extravagant - daca sadismul poate fi astfel -, tortionarii lor impunandu-le sa tortureze la randul lor, ca sa li se conteste insasi calitatea de victime. In ultima faza a ciclului, nefericitii sunt constransi sa-si tortureze cei mai buni prieteni, ca dovada a convertirii lor launtrice. Toata lumea a fost torturata, toata lumea a torturat. Cei morti acolo si cei care au supravietuit au fost privati pana si de propria lor nefericire. Virgil Ierunca a avut curajul sa intre in acest infern si sa-i devina istoric, pentru edificarea generatiilor viitoare. (Francois FURET)",
+  "isbn": 9789735062552,
+  "total": 15,
+  "used": 0,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/48/1837048/fenomenul-pitesti_1_fullsize.jpg"
+},{
+  "_id": {
+    "$oid": "5ebbe1596ae6084c8cd2fe48"
+  },
+  "name": "Hotul de carti",
+  "author": "MARKUS ZUSAK",
+  "date": {
+    "$date": "2011-07-27T00:00:00Z"
+  },
+  "genre": "Fictiune",
+  "description": "Este anul 1939. Germania nazista. Tara isi tine rasuflarea. Moartea nu a avut niciodata mai mult de lucru, si va deveni chiar mai ocupata. Liesel Meminger si fratele ei mai mic sunt dusi de catre mama lor sa locuiasca cu o familie sociala in afara orasului München. Tatal lui Liesel a fost dus departe sub soapta unui singur cuvant nefamiliar - Kommunist -, iar Liesel vede in ochii mamei sale teama unui destin similar. Pe parcursul calatoriei, Moartea ii face o vizita baietelului si o observa pe Liesel. Va fi prima dintre multe intalniri apropiate. Langa mormantul fratelui ei, viata lui Liesel se schimba atunci cand ea ridica un singur obiect, ascuns partial in zapada. Este Manualul Groparului, lasat acolo din greseala, si este prima ei carte furata. Astfel incepe o poveste despre dragostea de carti si de cuvinte, pe masura ce Liesel invata sa citeasca cu ajutorul tatalui ei adoptiv, care canta la acordeon. In curand, va fura carti de la incendierile de carti organizate de nazisti, din biblioteca sotiei primarului, si de oriunde le mai putea gasi. Hotul de carti este o poveste despre puterea cuvintelor de a creea lumi. Cu o scriitura superb maiestrita si arzand cu intensitate, premiatul autor Marcus Zusak ne-a daruit una dintre cele mai durabile povesti ale timpurilor noastre.",
+  "isbn": 9786066096133,
+  "total": 50,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/82/157982/hotul-de-carti_1_fullsize.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ebe64b4ac98930f10ccd763"
+  },
+  "name": "Povestea mea",
+  "author": "MICHELLE OBAMA",
+  "date": {
+    "$date": "2018-07-27T00:00:00Z"
+  },
+  "genre": "Biografii",
+  "description": "In memoriile ei, o opera de o reflexivitate profunda, scrisa intr-un stil fermecator, Michelle Obama ii invita pe cititori in lumea sa, facand o cronica a experientelor ce au format-o, pornind de la copilaria petrecuta in partea de sud a orasului Chicago, trecand prin anii in care a fost director executiv si a trebuit sa imbine responsabilitatile de mama cu cele profesionale, si ajungand la anii petrcuti la cea mai vestita adresa din lume. Descrie cu sinceritate desavarsita si cu o inteligenta vie reusitele si dezamagirile, atat din plan public, cat si din cel personal, relatandu-si povestea asa cum a trait-o, folosindu-se de propriile ei cuvinte si asa cum doreste ea.  Plina de caldura, de intelepciune si de revelatii, Povestea mea este o insumare neobisnuit de intima ce vine din partea unei femei inimoase si plina de caracter, care a sfidat necontenit asteptarile, si a carei poveste ne inspira.  Citand propria declaratie a lui Michele Obama: ”Procesul de scriere al acestei carti a fost pentru mine unul revelator si plin de insemnatate. In rastimpul pana la publicarea cartii Becoming in toamna aceasta, sper ca si voi va veti gandi la propriile povesti, si am incredere ca asta va va ajuta sa deveniti orice doriti. Povestile voatsre sunt cele pe care le aveti acum si pe care le veti avea mereu si sunt povestile pe care trebuie sa vi le asumati.”",
+  "isbn": 9786063330087,
+  "total": 100,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/93/1556293/povestea-mea_1_fullsize.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ebe6583ac98930f10ccd764"
+  },
+  "name": "Anatomia stretchingului",
+  "author": "ARNOLD G. NELSON, JOUKO KOKKONEN",
+  "date": {
+    "$date": "2020-06-04T19:06:00Z"
+  },
+  "genre": "Fitness",
+  "description": "Peste 250 000 exemplare vandute  Acum intr-o varianta extinsa, imbunatatita si actualizata, bestsellerul Anatomia stretchingului iti arata cum sa-ti cresti amplitudinea miscarii, sa-ti suplimentezi antrenamentul, sa-ti maximizezi mobilitatea si sa te refaci mai repede dupa accidentari. De asemenea, vei intelege mai bine felul in care fiecare intindere iti afecteaza corpul, vazand ce se intampla in interior.  Aceasta editie noua a Anatomiei stretchingului este ca un set de radiografii ale intinderilor, dar de calitate mai buna. Nu doar ca vei vedea ilustratii color ale muschilor in actiune, dar vei observa cum o schimbare a pozitiei poate modifica dificultatea miscarilor si cum sunt solicitati muschii, ca si modul in care variatiile pot imbunatati siguranta si eficacitatea intinderilor. Sunt detaliate procedurile si beneficiile exercitiilor, consideratiile privind siguranta, precum si variatiile corespunzatoare fiecarui nivel de antrenament.  Fiecare exercitiu descrie solicitarea primara si secundara a muschilor, cum si cand sa faci intinderile si care muschi sunt activati pentru sustinere. Programele de stretching ofera trei niveluri de dificultate, printre care si stretchingul usor, folosit in recuperarea fizica de dupa inflamatii si accidentari. Un capitol nou despre intinderile dinamice descrie cele mai eficiente exercitii pentru incalzirea atletilor, iar un alt capitol iti arata cum sa-ti alcatuiesti un plan personalizat pe baza nevoilor tale individuale, inclusiv un program de intinderi statice pasive, care s-a dovedit ca ajuta la scaderea glicemiei.  Fie ca vrei sa-ti cresti flexibilitatea, sa-ti imbunatatesti performantele atletice sau sa-ti reduci durerile si tensiunea musculara, Anatomia stretchingului este ghidul tau vizual pentru o tehnica corecta a intinderilor.  Dr. Arnold G. Nelson este profesor la Facultatea de Kinesiologie din cadrul Universitatii de Stat din Louisiana. Cercetator renumit in domeniul flexibilitatii, Nelson este considerat o autoritate in ceea ce priveste efectul intinderilor asupra performantei musculare. Este membru al Colegiului American de Medicina Sportiva si a primit titlul de doctor in fiziologie musculara la Universitatea din Texas, Austin.  Dr. Jouko Kokkonen este doctor in fiziologia sportului si profesor de stiinte sportive la Universitatea Bringham Young din Hawaii. De mai bine de doua decenii preda anatomie, kinesiologie, fiziologia sportului si conditionare atletica, si de peste trei decenii este antrenor de atletism. Cercetarile lui Kokkonen se axeaza pe efectele acute si cronice ale intinderilor.",
+  "isbn": 9786067891409,
+  "total": 150,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/98/1351598/anatomia-stretchingului_1_fullsize.jpg",
+  "used": 2
+},{
+  "_id": {
+    "$oid": "5ebe661bac98930f10ccd765"
+  },
+  "name": "Calaretul de arama",
+  "author": "PAULLINA SIMONS",
+  "date": {
+    "$date": "2018-05-27T00:00:00Z"
+  },
+  "genre": "Aventura",
+  "description": "O minunata poveste de dragoste se infiripa in Leningradul ocupat de nemti, in timpul celui de-al Doilea Razboi Mondial. Tatiana are doar saptesprezece ani, cand nazistii invadeaza Rusia, in 1941. Locuieste impreuna cu familia ei intr-un apartament micut din Leningrad, ducand o viata modesta, dar linistita. Razboiul n-a atins inca acest oras marturie a unei glorii apuse, unde mai exista speranta. Fire romantica, Tania simte ca perioada copilariei a luat sfarsit cand il cunoaste pe Alexander, un locotenent din Armata Rosie de care se indragosteste la prima vedere. Dar intamplarea face ca rivala ei pentru inima ofiterului sa fie chiar Dasa, sora ei mai mare.  Prinsa intre dragostea de sora si iubirea pentru Alexandru, inima Tatianei devine, si ea, un camp de batalie.  Cei doi indragostiti, Tatiana si Alexander, vor fi angrenati in iuresul evenimentelor si vor avea de dus o lupta apriga, plina de sacrificii, pentru a-si castiga libertatea si dreptul de a-si trai iubirea.",
+  "isbn": 9786068754383,
+  "total": 36,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/is/product-images/cartero/8416c58d/31a8/4b3e/a221/8506f1a8009d/8416c58d-31a8-4b3e-a221-8506f1a8009d_1.jpg",
+  "used": 2
+},{
+  "_id": {
+    "$oid": "5ebe6683ac98930f10ccd766"
+  },
+  "name": "Endgame Jocul final Regulile jocului",
+  "author": "JAMES FREY, NILS JOHNSON-SHELTON",
+  "date": {
+    "$date": "2017-09-27T00:00:00Z"
+  },
+  "genre": "Actiune",
+  "description": "Au ramas in viata cei puternici .  Mai trebuie gasita o singura cheie.     Incheierea exploziva a trilogiei ENDGAME.  Au fost descoperite doua chei. Au ramas in viata doar cei mai puternici Jucatori. Mai trebuie gasita o singura cheie pentru a castiga Jocul Final si pentru a salva lumea.     Citeste cartea.  Gaseste indiciile.  Descifreaza enigma.  Exista un singur castigator.  Jocul Final e real.  Jocul Final a inceput.     Pentru Sarah, Jago, Aisling, Maccabee, Shari, An si Hilal, Jocul Final a ajuns in ultima etapa. Cheia Pamantului si Cheia Cerului au fost deja gasite, mai trebuie descoperita o singura cheie: Cheia Soarelui. Jucatorul care o va gasi isi va salva semintia, iar ceilalti vor pieri odata cu restul lumii.  Numai unul poate castiga.     Bengalul de Vest, India   Maccabee Joaca pentru a castiga. Are Cheia Pamantului si Cheia Cerului si e hotarat sa gaseasca Cheia Soarelui. Dar in Jocul Final soarta oricui se poate schimba intr-o clipita. Maccabee trebuie sa Joace cu grija. Trebuie sa-si pazeasca spatele.     Calcutta, India  An Liu Joaca pentru moarte. Scopul lui: sa opreasca Jocul Final si sa distruga lumea.     Sikkim, India  Aisling nu mai este o Jucatoare in Jocul Final – acum Joaca pentru viata. Misiunea lui Aisling, Sarah, Jago, Shari si Hilal este sa opreasca Jocul Final. Cheia Soarelui nu trebuie gasita. Oricare ar fi scopul pentru care Joaca, toti Jucatorii au un lucru in comun: sunt gata sa moara pentru a-si indeplini misiunea. Toti vor sa incheie Jocul, dar fiecare in termenii sai.     James Frey s-a nascut in Cleveland. Toate cartile lui – O mie de farame, Prietenul meu Leonard, Dimineata insorita si Testamentul Final al Sfintei Biblii – au fost bestselleruri internationale.  Nils Johnson-Shelton este coautorul succesului editorial Niciun inger. Chinuitoarea mea calatorie incognito in Cercul Secret al Ingerilor Iadului. Este  si autorul seriei pentru adolescenti Cronici din lumea de dincolo, publicata de Full Fathom Five.  Endgame este un fenomen mondial, primul proiect interactiv carte-joc, aparut in 30 de tari. Cu aplicatia mobila creata de Niantic Labs de la Google poti sa joci in viata reala o versiune a Jocului Final, fiind liber sa alegi o semintie si sa lupti cu ceilalti.",
+  "isbn": 9786064001825,
+  "total": 55,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/31/644731/endgame-jocul-final-regulile-jocului_1_fullsize.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ebe67c0ac98930f10ccd767"
+  },
+  "name": "Disconfort Residence Cum sa identifici capcanele din schita apartamentului pe care vrei sa-l cumperi",
+  "author": "RADU NEGOITA",
+  "date": {
+    "$date": "2018-08-27T00:00:00Z"
+  },
+  "genre": "Arhitectura",
+  "description": "CONFORT (conform dexonline.ro): s. n. Totalitatea conditiilor materiale care asigura o existenta civilizata, placuta, comoda si igienica, din fr. confort.  Dupa cum se poate observa, notiunea de \"confort\" e prea abstracta pentru binele comun. Eu cred ca lucrurile pot fi vazute altfel: confort inseamna sa nu-ti intre apa de ploaie in cizme sau sa nu-ti plezneasca cusatura pantalonilor cand te apleci. Sau sa ai loc sa te ridici de pe tron in \"camera mica\" de la tine de acasa...  Daca societatea noastra ar fi alcatuita din minioni galbiori, inalti cat o butelie, manutele tale vioaie ar frunzari acum ceva respectabil despre istoria sau politica romanilor, pe o canapea de papusi. Fiind de statura mica, ai incapea lejer in apartamentele pe care le vand dezinvolt o parte dintre dezvoltatorii romani lasati nesupravegheati si n-ar mai fi nevoie de ghiduri despre cum sa nu fii pacalit. Din pacate, am evoluat in umanoizi cu proportii ce nu rimeaza cu recolta de nascociri imobiliare de pe piata, asa ca imi rezerv dreptul de a critica materialul clientului.  Cartea de fata este o prima tentativa de a evalua o parte dintre greselile de arhitectura cu care te poti intalni aproape zilnic in 30 de ani de platit rate (nu iti doresc, dar se poate intampla...). Hazul de necaz e optional - daca vrei sa iti cumperi o locuinta, vei gasi aici explicatii accesibile despre lucrurile la care trebuie sa fii atent, ca sa poti sa alegi in cunostinta de cauza. Avertisment: nu se recomanda celor slabi de inima.  P.S.: Daca si voi ati observat ca orasele din Romania nu seamana cu cele din Franta si sunteti curiosi \"cum de se poate asa ceva\", mergeti la capitolul despre sursele haosului din zona imobiliara sau, pur si simplu, cumparati cartea.  dr. arh. Radu Negoita fondator piatradecasa.ro & Case Strambe pe Radar  RADU NEGOITA a absolvit Facultatea de Arhitectura a Universitatii de Arhitectura si Urbanism Ion Mincu in 2006 si, in 2013 a fost confirmat doctor in arhitectura, in urma sustinerii unei teze despre avatarurile conceptului de confort. Experienta din practica profesionala si cea universitara l-au ajutat sa puna bazele portalului Case Strambe pe Radar, momentan singurul loc din internetul romanesc care identifica problemele de calitate din zona rezidentiala.  Cartea lui Radu Negoita n-ar trebui sa-ti lipseasca daca vrei sa intri in lumea dura a cumparatorilor de apartamente din Romania. Agentii imobiliari si vanzatorii o sa incerce sa-ti vanda niste gogosi care nici nu se compara cu minciuna aia cu \"e la zece minute de metrou\", iar ghidul lui Radu o sa-ti arate cum sa treci peste ele. Sunt case noi, care, la prima vedere, par genul de apartament in care ai vrea sa-ti traiesti toata viata, dar adevarul este ca sunt extrem de inguste, n-au spatii de depozitare si, fara un ochi de specialist, n-o sa te prinzi cat inseamna metrii aia patrati din oferta.  Mihai Popescu, Senior Editor, VICE Romania  Cartea pe care o aveti in mana, achizitionata pentru ca vi s-a parut interesanta sau pentru ca cineva care v-a vrut binele, v-a recomandat-o sau v-a imprumutat-o, este un manual despre cum sa nu fii inselat in asteptari si sa reusesti sa faci o achizitie in deplina cunostinta de cauza. Bineinteles ca doar lectura ei nu va transforma in specialisti, dar, cel putin, sper ca pentru urmatorul contract de vanzare-cumparare a unei locuinte va va pune in garda si veti solicita ajutorul unuia.  Conf. univ. dr. Cezar TITA, avocat  Despre confort - acel \"ceva\" invizibil, care face diferenta dintre casa si acasa - se scrie rar. Este sufletul casei, adica exact ce le lipseste, din pacate, prea multora dintre cutiile pe care le gasim pe piata cu eticheta de \"locuinte noi\". Colegul Radu Negoita este una dintre putinele minti si voci care, printr-o analiza obiectiva a zilei, ia pulsul subiectului propus in mod cat se poate de constient si pertinent. Cartea prezinta cu maiestrie, sarcasm si, pe alocuri, cu umor negru contagios, situatii din contextul mediului investitional \"mioritic\" actual. Ma bucur ca a ales sa isi exprime punctul de vedere in scris si cu atata minutiozitate - prin aceasta carte, cei care isi cauta o locuinta au acum de partea lor aliatul potrivit.  Mario Kuibus",
+  "isbn": 9786067223057,
+  "total": 75,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/69/1286869/disconfort-residence-cum-sa-identifici-capcanele-din-schita-apartamentului-pe-care-vrei-sa-l-cumperi_1_fullsize.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ebe6824ac98930f10ccd768"
+  },
+  "name": "Culorile si viata lor secreta",
+  "author": "KASSIA ST CLAIR",
+  "date": {
+    "$date": "2017-05-27T00:00:00Z"
+  },
+  "genre": "Arta",
+  "description": "Neobisnuitele povesti ale celor mai seducatoare nuante, ale celor mai fascinanti pigmenti si ale celor mai fragile umbre. De la galbenul-solar imaginat de Van Gogh intr-o simfonie de tente crude sau frante la cel mai stins Veronese pornit spre albastru-regal, de la puritatea morala si spirituala din gandirea lui Le Corbusier la albul-infinit modelat de Rodin, de la carbunele de pe peretii pesterii din Lascaux la perioada albastra a lui Picasso, de la verdele-Kelly la purpura imperiala si rozul-fluorescent al generatiei punk, un foc de artificii, un studiu fara asemanare al civilizatiei umane. Cutreierand rafinat universul politicii si al modei, al artelor si al razboiului, Culorile si viata lor secreta soptesc istoria vie a propriei noastre culturi.     „O aventura in jurul lumii, fara sa iesi din cutia ta de acuarele.“ - SIMON GARFIELD     Acest volum este tiparit la tipografia Monitorul Oficial pe hartie Cocoon Offset, o gama inovatoare de hartii offset extra-albe, certificate FSC® si 100% reciclate, asigurand o reproducere a culorilor consistenta si de inalta clasa, mentinand o viteza de imprimare excelenta. Prin alegerea Cocoon offset, niciodata nu va trebui sa faci un compromis intre gradul de alb si acreditarile de mediu.",
+  "isbn": 9786068564784,
+  "total": 95,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/90/384990/culorile-si-viata-lor-secreta_1_fullsize.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ebe68d0ac98930f10ccd769"
+  },
+  "name": "Pur si simplu despre muzica",
+  "author": "HARUKI MURAKAMI",
+  "date": {
+    "$date": "2018-11-27T00:00:00Z"
+  },
+  "genre": "Muzica",
+  "description": "\"O perspectiva fascinanta asupra naturii muzicii.\" (Publishers Weekly)  \"Dialogurile fermecatoare, lipsite de orice urma de afectare, dintre acesti doi artisti pasionati - scriitorul captivant, in romanele caruia muzica joaca un rol de frunte, si dirijorul neobosit si afabil - vor cuceri orice cititor.\" (The New York Times)  \"O lectura fara precedent. A vorbi despre muzica, se spune adesea, este ca si cum ai dansa despre arhitectura, dar ce bucurie sa-i vezi pe acesti doi prieteni cum danseaza.\" (The Guardian)  \"O carte irezistibil de seducatoare.\" (Evening Standard)",
+  "isbn": 9789734675531,
+  "total": 175,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/08/1955908/pur-si-simplu-despre-muzica_1_fullsize.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ebe6972ac98930f10ccd76a"
+  },
+  "name": "Ce este Educatia Financiara",
+  "author": "ROBERT T. KIYOSAKI",
+  "date": {
+    "$date": "2018-04-27T00:00:00Z"
+  },
+  "genre": "Finante",
+  "description": "ROBERT KIYOSAKI este un american de origine japoneza, nascut si crescut in Hawaii. Dupa ce a absolvit US Merchant Marine Academy din New York, s-a inrolat in trupele de puscasi marini si a luptat in Vietnam ca ofiter, pilot de elicopter militar. Dupa razboi, a lucrat in departamentul de vanzari al Xerox Corporation si, in 1977, a intemeiat o companie care a adus pe piata primele portofele din nailon si Velcro cu diverse simboluri si embleme rock-n-roll. In 1985 a fondat o companie internationala care avea ca scop educarea a zeci de mii de oameni din intreaga lume in materie de afaceri si investitii. In 1994, Robert si-a vandut afacerea si, datorita investitiilor, a putut sa se retraga din activitate la varsta de 47 de ani. In scurta perioada petrecuta ca \"pensionar a scris bestsellerul international Tata bogat, tata sarac, iar in 2006 a scris, impreuna cu Donald Trump, De ce vrem sa fii bogat. In calitate de antreprenor, mentor si investitor, Robert scrie rubrica lunara \"Why the Rich Are Getting Richer pentru Yahoo! Finance, precum si editorialul \"Rich Returns pentru revista Entrepreneur.  TOM WHEELWRIGHT (expert contabil) este forta din spatele firmei de consultanta financiara ProVision si unul dintre membrii echipei Rich Dad Advisors conduse de Robert Kiyosaki. Pentru mai bine de 30 de ani, Tom a conceput strategii fiscale sau de business pentru investitori in imobiliare sau high tech. A participat la numeroase conferinte sau mese rotunde organizate de corporatii ori institutii de stat prestigioase, prezentandu-si viziunea provocatoare in legatura cu taxele si problemele fiscale cu care se confrunta societatea americana si lumea in general.  Ce te-a invatat scoala despre bani? Aceasta carte este despre ce nu ai invatat la scoala.  DE CE OAMENII CARE PUN BANI DEOPARTE SUNT PERDANTI  Odata ca niciodata, oamenii care puneau bani deoparte erau castigatori. Odata ca niciodata, oamenii puteau pune bani deoparte si deveneau bogati. Astazi, cei care pun bani deoparte sunt perdanti.  Sa vedem ce s-a intamplat cu valoarea economiilor: In 1970, daca puneai deoparte 1 milion de dolari, castigai o dobanda de 15%, adica 150 000 de dolari pe an. In 2017, daca pui deoparte 1 milion de dolari, castigi o dobanda de 1,5%, adica 15 000 de dolari pe an. Astazi, nici macar un milionar nu poate trai cu 15 000 de dolari pe an. S-a terminat cu basmele?  CE ESTE EDUCATIA FINANCIARA... DE FAPT? este o o carte despre o educatie financiara reala - si nu despre basme precum: \"Mergi la scoala, ia-ti o slujba, munceste din greu, cumpara-ti o casa, plateste-ti datoriile si investeste pe termen lung la bursa de valori.  Aceasta carte este continuarea cartii Tata bogat, tata sarac. Daca esti in cautarea unor noi idei despre cum sa supravietuiesti si sa-ti mearga bine in viitor, aceasta este cartea potrivita pentru tine. Cu douazeci de ani in urma, Robert Kiyosaki a scris Tata bogat, tata sarac, prima carte din istorie despre finantele personale. Cartea a contestat si a schimbat felul in care zeci de milioane de oameni din toata lumea inteleg banii. Cu o perspectiva despre bani si despre investitii care contrazice adesea gandirea conventionala, autorul si-a castigat reputatia internationala comunicand onest, ireverentios si curajos - si devenind, astfel, un sustinator pasionat si explicit al educatiei financiare.",
+  "isbn": 9786064400376,
+  "total": 205,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/56/1285056/ce-este-educatia-financiara-de-fapt_1_fullsize.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ebe6a29ac98930f10ccd76b"
+  },
+  "name": "Fetita din scrisoare",
+  "author": "EMILY GUNNIS",
+  "date": {
+    "$date": "2019-10-27T00:00:00Z"
+  },
+  "genre": "Drama",
+  "description": "Anul 1956. Atunci cand Ivy Jenkins ramane insarcinata, este trimisa in dizgratie la St Margaret, o casa intunecata, infioratoare pentru mamele necasatorite. Copilul ei este adoptat impotriva vointei sale, iar Ivy nu va pleca niciodata din casa groazei.  Anul 2017. Samantha Harper este o jurnalista a carei cariera se afla in impas. Cand ii cade in mana o scrisoare din trecut, continutul o socheaza si o tulbura. Scrisoarea este de la o mama tanara, care implora sa fie salvata de la St Margaret, inainte de a fi prea tarziu.  Sam investigheaza tragica poveste, ca jurnalista, dar si prin prisma misterioaselor legaturi personale pe care le intuieste, si descopera o multime de morti inexplicabile care inconjoara femeia si copilul ei. Sub presiunea iminentei demolari a asezamantului St Margaret, Sam are doar doua zile pentru a pune in ordine si a completa un puzzle vechi de saizeci de ani inainte ca adevarul, care se afla tulburator de aproape de casa, sa se piarda pentru totdeauna...  Imbinand ritmul alert si suspansul investigatiei cu atmosfera apasatoare de thriller si cu drama pierderilor ireparabile, Fetita din scrisoare pune la grea incercare taria emotionala a cititorului.  \"Am fost captivata de Fetita din scrisoare. Povestea este convingatoare, cu multe rasturnari de situatie, iti sfasie inima si te provoaca sa gandesti. Un roman care iti ramane in minte mult timp dupa ce l-ai citit.\" - SOPHIE KINSELLA  \"O carte grozava, cu adevarat greu de lasat din mana. Cu un ritm rapid, cu o intriga stapanita in mod stralucit, dureroasa uneori, are toate caracteristicile unui bestseller.\" - LESLEY PEARSE  \"O poveste profund emotionanta, cu atat mai mult cu cat se bazeaza pe o realitate socanta. Am devorat-o, m-am implicat, m-a emotionat si m-a captivat in egala masura.\" - FANNY BLAKE",
+  "isbn": 9786063344589,
+  "total": 295,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/is/product-images/cartero/4eead8fb/8c18/4b40/9ae6/7921ab7b8491/4eead8fb-8c18-4b40-9ae6-7921ab7b8491_1.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ebe6bb3ac98930f10ccd76c"
+  },
+  "name": "Matematica Olimpiade si concursuri scolare 2019 Clasele IV-VI",
+  "author": "GHEORGHE CAINICEANU (COORD.)",
+  "date": {
+    "$date": "2019-11-27T00:00:00Z"
+  },
+  "genre": "Educatie",
+  "description": "Culegerea de fata contine majoritatea problemelor date la concursurile de matematica din Romania la clasele a IV-a, a V-a si a VI-a in anul scolar 2018-2019. Enunturile si solutiile au fost redactate cu grija de unii dintre cei mai profesionisti si pasionati profesori din tara, care de-a lungul anilor au cizelat competentele matematice ale multor intelectuali cu care azi ne mandrim.  Culegerea poate fi considerata o continuare pentru pregatirea de performanta a celor din colectia Mate 2000 Excelenta. In redactarea solutiilor, s-a avut in vedere ca inclusiv parintii sa poata ajuta la pregatirea copiilor pentru concursurile scolare, folosindu-se de acest auxiliar.  Prof. univ. dr. Radu Gologan",
+  "isbn": 9789734731107,
+  "total": 500,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/is/product-images/cartero/04cba43b/5e0b/4226/8d80/c08987ab37f0/04cba43b-5e0b-4226-8d80-c08987ab37f0_1.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ebe6c00ac98930f10ccd76d"
+  },
+  "name": "Programarea in limbajul C/C++ pentru liceu",
+  "author": "EMANUELA CERCHEZ, MARINEL SERBAN",
+  "date": {
+    "$date": "2005-01-27T00:00:00Z"
+  },
+  "genre": "Tehnologie",
+  "description": "Un continut teoretic sustinut prin numeroase aplicatii practice rezolvate, cu explicatii detaliate si implementari in limbajul C sau C++, la care se adauga numeroase exercitii propuse spre rezolvare, in diferite grade de dificultate, este ceea ce recomanda si individualizeaza acest volum. El se adreseaza celor familiarizati cu elementele de baza ale limbajului C/C++, prezentate in volumul I al lucrarii (Programarea in limbajul C/C++ pentru liceu), fiind de un real folos elevilor de liceu, celor care se pregatesc pentru bacalaureat, dar si participantilor la olimpiadele scolare. Toate notiunile teoretice si problemele rezolvate sau propuse au fost utilizate de autori in activitatea didactica, atat la clasa, cat si la Centrul de Excelenta din Iasi.  Cuprins:  Recursivitate Metoda Divide et impera Metoda backtracking Programarea dinamica Elemente de combinatorica",
+  "isbn": 9789734600922,
+  "total": 300,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/79/3479/programarea-in-limbajul-cc-pentru-liceu-metode-si-tehnici-de-programare-vol-2_1_fullsize.jpg",
+  "used": 0
+},{
+  "_id": {
+    "$oid": "5ed1591890e5e6358471267d"
+  },
+  "name": "Astrofizica pentru cei grabiti",
+  "author": "NEIL DEGRASSE TYSON",
+  "date": {
+    "$date": "2017-07-27T21:00:00Z"
+  },
+  "genre": "Stiinte",
+  "description": "Bestseller New York Times  Poate incapea esenta Universului intr-o carte?     Care este natura spatiului si timpului? Cum ne „potrivim\" in Univers? El cum se adapteaza la noi? Tyson aduce Universul pe pamant intr-un mod clar si succint, prin prezentari stralucite, in capitole care pot fi citite oriunde si oricand de catre contemporanii nostri mereu grabiti.   Astrofizica pentru cei grabiti va va edifica, abordand tematici cosmice: de la Big Bang la gauri negre, de la quarks la mecanica cuantica, de la cautarea planetelor pe cerul instelat la cautarea formelor de viata din Univers.     „Tyson ne explica magistral stiinta... tot ce spune poate inspira orice lider, profesor, cercetator sau pasionat de domeniu.\" – Forbes     „Tyson este un maestru al rezumarii si al simplificarii… ia idei complexe, minunate, le demonteaza pana la miez, apoi le umple cu alegorii colorate si glume istete, facandu-le accesibile pentru laici.\" - Salon     Neil deGrasse Tyson este un astrofizician american, cercetator asociat in cadrul Departamentului de astrofizica al Muzeului American de Istorie Naturala si directorul Planetariului Hayden. De asemenea, este gazda emisiunii TV StarTalk si autorul a numeroase lucrari de specialitate, printre care Space Chronicles, Origins si The Pluto Files. Locuieste in New York City.",
+  "isbn": 9786064003058,
+  "total": 10,
+  "used": 1,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/is/product-images/cartero/cf1a9317/8e63/4b3c/bc43/845778204084/cf1a9317-8e63-4b3c-bc43-845778204084_1.jpg"
+},{
+  "_id": {
+    "$oid": "5edfd25cfaf0c159e0401276"
+  },
+  "name": "Craniul din biblioteca, Lockwood si asociatii, Vol. 2",
+  "author": "JONATHAN STROUD",
+  "date": {
+    "$date": "2015-09-27T21:00:00Z"
+  },
+  "genre": "Actiune",
+  "description": "In cele sase luni de cand Anthonz, Lucy si George lucreaza impreuna, Agentia Lockwood nu a prea progresat. Quill Kipps si agentii Fittes continua sa le ia cazurile de sub nas. Intr-un acces de furie, Anthony isi provoaca rivalul la o competitie: urmatoarea data cand cele doua agentii se vor duela pentru un caz, cei care vor pierde vor trebui sa recunoasca asta in paginile ziarului Times. Asa incepe povestea incitanta al celui de-al doilea volum din seria Lockwood si asociatii, din care nu lipsesc stafiile malitioase, urmaririle cu sufletul la gura si un mister demn de un roman politist. Scris cu mult umor, romanul este captivant inca de la prima pagina, fiind alegerea perfecta pentru o noapte plina de... povesti de groaza!",
+  "isbn": 9786066099790,
+  "total": 50,
+  "used": 1,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/71/252571/craniul-din-biblioteca-lockwood-si-asociatii-vol-2_1_fullsize.jpg"
+},{
+  "_id": {
+    "$oid": "5edfd446faf0c159e0401277"
+  },
+  "name": "Mormantul pasarii de aur",
+  "author": "ELIZABETH PETERS",
+  "date": {
+    "$date": "2011-01-01T21:00:00Z"
+  },
+  "genre": "Aventura",
+  "description": "Suntem in primavara lui 1989. Trei tineri - Noah, Joyce si un narator neidentificat - isi parasesc indepartatul tinut de bastina, urmandu-si fiecare traseul de migratie, asemenea unor fantastice fapturi oceanice. Ajung cu totii in Montreal, dar pe cai diferite, drumuri de descoperire personala, presarate cu greseli si cu incercari, cu dezamagiri amoroase, si marcate de intortocheatele increngaturi ale arborelui lor genealogic comun. Desi ei se socot a fi singuri, traseele li se intretaie neincetat, lasand sa se intrevada simetria din profundul existentei lor. Nicolas Dickner are un talent innascut de povestitor, episoadele pline de farmec si de umor ale acestui roman dezvaluindu-ne, intr-o insiruire apropiata travaliului unui zoolog, surprinzatoarele legaturi dintre arheologi obsedati de gunoaie, pirati din vremuri trecute si prezente, serpi de mare, specii de peste ton, un scafandru analfabet, un computer Commodore 64, o carte enigmatica, lipsita de coperte si o busola stricata al carei ac indica inversunat directia satului aleutin Nikolski.",
+  "isbn": 9786068255453,
+  "total": 300,
+  "used": 1,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/28/157028/mormantul-pasarii-de-aur_1_fullsize.jpg"
+},{
+  "_id": {
+    "$oid": "5edfd597faf0c159e0401278"
+  },
+  "name": "Hobbitul",
+  "author": "J.R.R. TOLKIEN",
+  "date": {
+    "$date": "2012-12-07T21:00:00Z"
+  },
+  "genre": "Fictiune",
+  "description": "Aceasta este povestea despre cum un Baggins a avut o aventura si s-a trezit ca face si zice lucruri cu totul si cu totul neasteptate...  Bilbo Baggins este un hobbit care se bucura de o viata confortabila, lipsita de mari ambitii si care arareori face drumuri mai lungi decat cele pana in camara lui. Viata lui calma este deranjata de aparitia vrajitorului Gandalf si a treisprezece gnomi. Acestia vor sa-l ia cu ei intr-o aventura „intr-acolo si din nou inapoi“, caci au un plan cum sa fure comoara lui Smaug, un dragon urias si extrem de periculos. Preludiu la trilogia Stapanul Inelelor, Hobbitul s-a vandut in milioane de exemplare de la publicarea sa in 1937, devenind una dintre cele mai indragite si iubite carti ale secolului XX.",
+  "isbn": 9786066093682,
+  "total": 15,
+  "used": 0,
+  "image": "http://mcdn.elefant.ro/mnresize/350/350/images/81/203281/hobbitul_1_fullsize.jpg?v=2"
+}]

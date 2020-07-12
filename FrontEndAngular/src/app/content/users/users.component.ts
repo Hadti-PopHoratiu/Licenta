@@ -62,7 +62,6 @@ export class UsersComponent implements OnInit {
       this.totalNr = 0;
       if (Object.keys(response).length) {
         this.totalNr = response[0].total;
-        console.log(this.totalNr);
       }
     });
   }

@@ -78,11 +78,9 @@ export class BooksComponent implements OnInit {
       )
       .subscribe((response) => {
         this.books = response;
-        console.log(this.books);
         this.totalPages = 0;
         if (Object.keys(response).length) {
           this.totalPages = response[0].count;
-          console.log(this.totalPages);
         }
       });
   }
@@ -91,7 +89,6 @@ export class BooksComponent implements OnInit {
     this.book.deleteBook(id).subscribe(
       (res) => {
         this.getBookData();
-        console.log("deleted");
       },
       (err) => {}
     );

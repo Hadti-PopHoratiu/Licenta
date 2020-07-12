@@ -32,7 +32,6 @@ class Table extends React.Component {
       this.state.genresFilter
     ).then(
       (result) => {
-        console.log(result);
         this.setState({
           totalPages: 0,
         });
@@ -41,7 +40,6 @@ class Table extends React.Component {
             totalPages: result[0].count,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           books: result,
@@ -57,7 +55,6 @@ class Table extends React.Component {
   }
 
   handlePageChange(pageNumber) {
-    console.log(`active page is ${pageNumber}`);
     this.setState({ activePage: pageNumber });
     getBooks(
       pageNumber,
@@ -93,13 +90,10 @@ class Table extends React.Component {
     const target = event.target;
     const value = target.value;
     const name = target.name;
-    console.log(name);
-    console.log(value);
     this.setState({ [name]: value });
   }
 
   handleOptionChange(event) {
-    console.log(event.target.value);
     if (event.target.value === "book") {
       this.setState({
         isBook: true,
@@ -130,7 +124,6 @@ class Table extends React.Component {
             totalPages: result[0].count,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           books: result,
@@ -167,16 +160,15 @@ class Table extends React.Component {
                     value={this.state.filter}
                     onChange={this.handleChange}
                   />
-                  <div className="input-group-append">
+                  <div
+                    className="input-group-append"
+                    onClick={this.handleSubmit}
+                  >
                     <span
                       className="input-group-text amber lighten-3"
                       id="basic-text1"
                     >
-                      <i
-                        className="fas fa-search"
-                        onClick={this.handleSubmit}
-                        aria-hidden="true"
-                      ></i>
+                      <i className="fas fa-search" aria-hidden="true"></i>
                     </span>
                   </div>
                   <span

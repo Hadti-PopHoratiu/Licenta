@@ -1,0 +1,111 @@
+[{
+  "_id": {
+    "$oid": "5ea3373587d0cd0dbcc71884"
+  },
+  "name": "Gioana Macaroana",
+  "admin": true,
+  "username": "Admin",
+  "password": "Admin"
+},{
+  "_id": {
+    "$oid": "5ea871fb4be5a41cdca35dad"
+  },
+  "name": "Beni Stoica",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe7265ac98930f10ccd775"
+  },
+  "name": "Sergiu Pop",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe72bbac98930f10ccd776"
+  },
+  "name": "Buteanu Andrei",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe72beac98930f10ccd777"
+  },
+  "name": "Axinte Fechete",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe731dac98930f10ccd778"
+  },
+  "name": "Puie Monta",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe734bac98930f10ccd779"
+  },
+  "name": "Pamfile Maria",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe7364ac98930f10ccd77a"
+  },
+  "name": "Dorian Popa",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe7377ac98930f10ccd77b"
+  },
+  "name": "Marica Turnatoru",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe73c3ac98930f10ccd77d"
+  },
+  "name": "Marian Cutataru",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe73d4ac98930f10ccd77e"
+  },
+  "name": "Ponta Viorel",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe740aac98930f10ccd77f"
+  },
+  "name": "Zoikas Codrin",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe7420ac98930f10ccd780"
+  },
+  "name": "Vadim Barabule",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe744cac98930f10ccd781"
+  },
+  "name": "Taricescu Calan",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe745eac98930f10ccd782"
+  },
+  "name": "Portocescu Mihai",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ebe747cac98930f10ccd783"
+  },
+  "name": "Covidel Ovidiu",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ec16f7e940d7834ecad4428"
+  },
+  "name": "Gigel Cosma",
+  "admin": false
+},{
+  "_id": {
+    "$oid": "5ed15b1790e5e6358471267e"
+  },
+  "name": "Alex Uleia",
+  "admin": false
+}]

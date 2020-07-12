@@ -34,7 +34,6 @@ class App extends React.Component {
     this.setState({
       isLogged: localStorage.getItem("loggedIn"),
     });
-    console.log(localStorage.getItem("loggedIn"));
   }
 
   updateLoggedInStatus() {
@@ -46,7 +45,6 @@ class App extends React.Component {
   }
 
   handleLogoutClick() {
-    console.log("clicked disconnect");
     localStorage.clear();
     this.setState({
       isLogged: false,
@@ -184,7 +182,7 @@ function LoggedIn(props) {
 }
 
 function LoggedOut(props) {
-  return <div>Please sign up.</div>;
+  return <div></div>;
 }
 
 function CheckIfLogged(props) {
@@ -196,7 +194,6 @@ function CheckIfLogged(props) {
 }
 
 function PrivateRoute({ children, isLogged, ...rest }) {
-  console.log(rest);
   return isLogged ? (
     <Route {...rest} render={() => children} />
   ) : (

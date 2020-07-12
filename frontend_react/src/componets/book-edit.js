@@ -25,7 +25,6 @@ class BookEdit extends React.Component {
   componentDidMount() {
     getBookById(this.props.match.params.id).then(
       (result) => {
-        console.log(result.author);
         this.setState({
           isLoaded: true,
           name: result.name,
@@ -48,8 +47,6 @@ class BookEdit extends React.Component {
 
     getGenres().then(
       (result) => {
-        console.log(this.props.match.params.id);
-        console.log(result);
         this.setState({
           isLoaded: true,
           genres: result,

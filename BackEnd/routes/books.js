@@ -15,13 +15,10 @@ router.get("/", async function (req, res, next) {
   if (req.query && req.query.genre) {
     filter["genre"] = req.query.genre.replace(/ /g, "").split(",");
   }
-  console.log(req.query);
-  console.log(filter);
   let books = await book.getBook(query, filter);
   if (!books && null === books) {
     return res.status(500).send({ message: "internal error" });
   }
-  console.log(books);
 
   let bookCount = await book.getBookCount(query, filter);
   return res.json(
@@ -45,13 +42,11 @@ router.get("/", async function (req, res, next) {
 
 router.get("/:id", async function (req, res, next) {
   let bookData = await book.getBookById(req.params.id);
-  console.log(req.params.id);
-  console.log(bookData);
 
   if (!bookData && null === bookData) {
     return res.status(500).send({ message: "internal error" });
   }
-  console.log(bookData);
+
   return res.json({
     id: bookData._id,
     name: bookData.name,
@@ -67,18 +62,15 @@ router.get("/:id", async function (req, res, next) {
 });
 
 router.post("/", async function (req, res, next) {
-  console.log(req.body);
   await book
     .addBook(req.body)
 
     .then((result) => {
-      console.log(result);
       return res
         .status(200)
         .json({ message: "Utilizatorul a fost adaugat cu succes" });
     })
     .catch((error) => {
-      console.log(error);
       return res.status(417).json({ message: "Date incorecte" });
     });
 });
@@ -87,13 +79,11 @@ router.put("/:id/bookCountUp", async function (req, res, next) {
   await book
     .editBookUsedCountUp(req.params.id)
     .then((result) => {
-      console.log(result);
       return res
         .status(200)
         .json({ message: "Utilizatorul a fost modificat cu succes" });
     })
     .catch((error) => {
-      console.log(error);
       return res.status(417).json({ message: "Date incorecte" });
     });
 });
@@ -103,13 +93,11 @@ router.put("/:id/bookCountDown", async function (req, res, next) {
     .editBookUsedCountDown(req.params.id)
 
     .then((result) => {
-      console.log(result);
       return res
         .status(200)
         .json({ message: "Utilizatorul a fost modificat cu succes" });
     })
     .catch((error) => {
-      console.log(error);
       return res.status(417).json({ message: "Date incorecte" });
     });
 });
@@ -119,13 +107,11 @@ router.put("/:id", async function (req, res, next) {
     .editBook(req.params.id, req.body)
 
     .then((result) => {
-      console.log(result);
       return res
         .status(200)
         .json({ message: "Utilizatorul a fost modificat cu succes" });
     })
     .catch((error) => {
-      console.log(error);
       return res.status(417).json({ message: "Date incorecte" });
     });
 });
@@ -135,11 +121,9 @@ router.delete("/:id", async function (req, res, next) {
     .deleteBook(req.params.id)
 
     .then((result) => {
-      console.log(result);
       return res.status(200).json({ message: "Cartea a fost sters cu succes" });
     })
     .catch((error) => {
-      console.log(error);
       return res.status(417).json({ message: "Date incorecte" });
     });
 });

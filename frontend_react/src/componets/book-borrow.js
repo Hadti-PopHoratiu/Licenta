@@ -35,8 +35,6 @@ class BookBorrow extends React.Component {
   async componentDidMount() {
     await getBookById(this.props.match.params.id).then(
       (result) => {
-        console.log("book by id");
-        console.log(result);
         this.setState({
           isLoaded: true,
           book: result,
@@ -75,9 +73,6 @@ class BookBorrow extends React.Component {
 
     getUserTable(this.state.book.name).then(
       (result) => {
-        console.log("user table");
-        console.log(this.state.book);
-        console.log(result);
         this.setState({
           isLoaded: true,
           usedUsers: result,
@@ -177,7 +172,6 @@ class BookBorrow extends React.Component {
   }
 
   handlePageChange(pageNumber) {
-    console.log(`active page is ${pageNumber}`);
     this.setState({ activePage: pageNumber });
     getUserFree(pageNumber, this.state.filter, this.state.book.name).then(
       (result) => {
@@ -189,7 +183,6 @@ class BookBorrow extends React.Component {
             totalPages: result[0].total,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           freeUsers: result,
@@ -222,7 +215,6 @@ class BookBorrow extends React.Component {
             totalPages: result[0].total,
           });
         }
-        console.log(result);
         this.setState({
           isLoaded: true,
           freeUsers: result,
@@ -259,16 +251,12 @@ class BookBorrow extends React.Component {
                     value={this.state.filter}
                     onChange={this.handleChange}
                   />
-                  <div class="input-group-append">
+                  <div class="input-group-append" onClick={this.handleSubmit}>
                     <span
                       class="input-group-text amber lighten-3"
                       id="basic-text1"
                     >
-                      <i
-                        class="fas fa-search"
-                        onClick={this.handleSubmit}
-                        aria-hidden="true"
-                      ></i>
+                      <i class="fas fa-search" aria-hidden="true"></i>
                     </span>
                   </div>
                 </div>
